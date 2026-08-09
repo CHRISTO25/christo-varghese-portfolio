@@ -8,8 +8,6 @@ import {
 
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  
-  // Formspree hook using your endpoint ID: mqpzpeod
   const [state, handleSubmit] = useForm("mqpzpeod");
 
   const skills = {
@@ -23,25 +21,25 @@ export default function App() {
     {
       title: "Symphoney Backend",
       category: "Backend Microservice / API",
-      tagColor: "from-amber-500/20 text-amber-300 border-amber-500/40",
+      tagColor: "from-cyan-500/25 text-cyan-300 border-cyan-500/40",
       description: "Developed scalable REST APIs using Golang and Gin framework for managing application data, robust routing, and PostgreSQL integration.",
       tech: ["Golang", "Gin Framework", "PostgreSQL", "REST API"],
       githubLink: "https://github.com/CHRISTO25/symphoney-backend",
-      icon: <Server className="w-6 h-6 text-amber-400" />
+      icon: <Server className="w-6 h-6 text-cyan-400" />
     },
     {
       title: "Zntra E-Commerce Platform",
       category: "Full-Stack Web App",
-      tagColor: "from-violet-500/20 text-violet-300 border-violet-500/40",
+      tagColor: "from-fuchsia-500/25 text-fuchsia-300 border-fuchsia-500/40",
       description: "Led development of an MVC-based e-commerce platform using Node.js & Express, increasing daily transactions and transaction speeds significantly.",
       tech: ["Node.js", "Express.js", "MongoDB", "Razorpay", "EJS"],
       githubLink: "https://github.com/CHRISTO25/zntra-ecommerce",
-      icon: <Database className="w-6 h-6 text-violet-400" />
+      icon: <Database className="w-6 h-6 text-fuchsia-400" />
     },
     {
       title: "Netflix Clone",
       category: "Frontend Web Application",
-      tagColor: "from-rose-500/20 text-rose-300 border-rose-500/40",
+      tagColor: "from-rose-500/25 text-rose-300 border-rose-500/40",
       description: "A dynamic streaming UI replica featuring media carousels, responsive grid layouts, and modern asynchronous JavaScript API integration.",
       tech: ["JavaScript", "HTML5", "CSS3", "REST APIs"],
       githubLink: "https://github.com/CHRISTO25/netflix",
@@ -50,7 +48,7 @@ export default function App() {
     {
       title: "OLX Clone",
       category: "Full-Stack Classifieds",
-      tagColor: "from-emerald-500/20 text-emerald-300 border-emerald-500/40",
+      tagColor: "from-emerald-500/25 text-emerald-300 border-emerald-500/40",
       description: "A peer-to-peer marketplace application supporting user authentication, product listings, live search filters, and structured database handling.",
       tech: ["JavaScript", "Node.js", "MongoDB", "Express"],
       githubLink: "https://github.com/CHRISTO25/olx_clone",
@@ -59,49 +57,49 @@ export default function App() {
     {
       title: "Zomato Clone",
       category: "UI/UX & Frontend Integration",
-      tagColor: "from-orange-500/20 text-orange-300 border-orange-500/40",
+      tagColor: "from-amber-500/25 text-amber-300 border-amber-500/40",
       description: "A comprehensive food delivery platform layout with restaurant browsing, dynamic menus, and fully responsive CSS grid design patterns.",
       tech: ["HTML5", "CSS3", "JavaScript"],
       githubLink: "https://github.com/CHRISTO25/Zomato-clone",
-      icon: <Code className="w-6 h-6 text-orange-400" />
+      icon: <Code className="w-6 h-6 text-amber-400" />
     },
     {
       title: "Apple Static Site",
       category: "High-Precision UI Design",
-      tagColor: "from-cyan-500/20 text-cyan-300 border-cyan-500/40",
+      tagColor: "from-sky-500/25 text-sky-300 border-sky-500/40",
       description: "Pixel-perfect replication of Apple’s official product marketing layout, emphasizing layout precision, sleek typography, and mobile responsiveness.",
       tech: ["HTML5", "CSS3", "Responsive Design"],
       githubLink: "https://github.com/CHRISTO25/Apple-Clone",
-      icon: <Sparkles className="w-6 h-6 text-cyan-400" />
+      icon: <Sparkles className="w-6 h-6 text-sky-400" />
     }
   ];
 
   return (
-    <div className="min-h-screen bg-[#030305] text-slate-100 font-sans selection:bg-amber-500 selection:text-black relative overflow-x-hidden">
+    <div className="min-h-screen bg-[#070913] text-slate-100 font-sans selection:bg-cyan-400 selection:text-black relative overflow-x-hidden">
       
-      {/* Hyper-Atmospheric Background Glow Orbs */}
-      <div className="absolute top-0 left-1/3 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-amber-500/10 rounded-full blur-[120px] sm:blur-[150px] pointer-events-none animate-pulse"></div>
-      <div className="absolute top-1/4 right-4 sm:right-10 w-[280px] sm:w-[450px] h-[280px] sm:h-[450px] bg-violet-600/10 rounded-full blur-[130px] sm:blur-[160px] pointer-events-none"></div>
-      <div className="absolute bottom-1/3 left-4 sm:left-10 w-[300px] sm:w-[550px] h-[300px] sm:h-[550px] bg-cyan-600/10 rounded-full blur-[140px] sm:blur-[180px] pointer-events-none"></div>
+      {/* Dynamic Animated Cosmic Background Gradients */}
+      <div className="absolute top-0 left-1/4 w-[350px] sm:w-[600px] h-[350px] sm:h-[600px] bg-cyan-500/15 rounded-full blur-[140px] pointer-events-none animate-pulse"></div>
+      <div className="absolute top-1/3 right-10 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-fuchsia-600/15 rounded-full blur-[150px] pointer-events-none animate-pulse duration-1000"></div>
+      <div className="absolute bottom-1/4 left-10 w-[350px] sm:w-[550px] h-[350px] sm:h-[550px] bg-indigo-600/15 rounded-full blur-[160px] pointer-events-none"></div>
 
       {/* HEADER / NAVBAR */}
-      <header className="sticky top-0 z-50 backdrop-blur-2xl bg-[#030305]/90 border-b border-white/10">
+      <header className="sticky top-0 z-50 backdrop-blur-2xl bg-[#070913]/85 border-b border-white/10 shadow-2xl">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
-          <a href="#" className="text-base sm:text-xl font-black tracking-widest text-white flex items-center gap-2.5 group">
-            <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-gradient-to-br from-amber-400 to-orange-600 flex items-center justify-center shadow-lg shadow-amber-500/30 group-hover:rotate-12 transition-transform">
-              <Terminal className="w-4 h-4 sm:w-5 sm:h-5 text-black" />
+          <a href="#" className="text-base sm:text-xl font-black tracking-widest text-white flex items-center gap-3 group">
+            <div className="w-9 h-9 rounded-2xl bg-gradient-to-tr from-cyan-400 via-indigo-500 to-fuchsia-500 flex items-center justify-center shadow-xl shadow-cyan-500/30 group-hover:rotate-45 transition-transform duration-500">
+              <Terminal className="w-5 h-5 text-black" />
             </div>
-            <span className="truncate">CHRISTO <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-violet-500">VARGHESE</span></span>
+            <span className="tracking-tighter">CHRISTO <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-fuchsia-400">VARGHESE</span></span>
           </a>
 
-          <nav className="hidden md:flex items-center gap-8 text-sm font-semibold tracking-wider text-slate-300">
-            <a href="#about" className="hover:text-amber-400 transition-colors">ABOUT</a>
-            <a href="#skills" className="hover:text-amber-400 transition-colors">EXPERTISE</a>
-            <a href="#projects" className="hover:text-amber-400 transition-colors">PROJECTS</a>
-            <a href="#contact" className="hover:text-amber-400 transition-colors">CONTACT</a>
+          <nav className="hidden md:flex items-center gap-8 text-sm font-bold tracking-wider text-slate-300">
+            <a href="#about" className="hover:text-cyan-400 transition-colors">ABOUT</a>
+            <a href="#skills" className="hover:text-cyan-400 transition-colors">EXPERTISE</a>
+            <a href="#projects" className="hover:text-cyan-400 transition-colors">PROJECTS</a>
+            <a href="#contact" className="hover:text-cyan-400 transition-colors">CONTACT</a>
             <a 
               href="#contact" 
-              className="px-6 py-2.5 rounded-full bg-gradient-to-r from-amber-400 to-orange-500 text-black font-extrabold hover:shadow-lg hover:shadow-amber-500/30 transition-all transform hover:-translate-y-0.5"
+              className="px-6 py-2.5 rounded-full bg-gradient-to-r from-cyan-400 to-indigo-500 text-black font-extrabold hover:shadow-lg hover:shadow-cyan-400/40 transition-all transform hover:-translate-y-0.5"
             >
               HIRE ME
             </a>
@@ -112,74 +110,74 @@ export default function App() {
             className="md:hidden text-slate-300 hover:text-white p-2 focus:outline-none"
             aria-label="Toggle Menu"
           >
-            {mobileMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
+            {mobileMenuOpen ? <X className="w-7 h-7 text-cyan-400" /> : <Menu className="w-7 h-7" />}
           </button>
         </div>
 
         {/* Mobile Dropdown Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden bg-[#07070c]/95 backdrop-blur-2xl border-b border-white/10 px-6 py-6 flex flex-col gap-5 text-base font-semibold shadow-2xl animate-fadeIn">
-            <a href="#about" onClick={() => setMobileMenuOpen(false)} className="text-slate-300 hover:text-amber-400 py-1 border-b border-white/5">ABOUT</a>
-            <a href="#skills" onClick={() => setMobileMenuOpen(false)} className="text-slate-300 hover:text-amber-400 py-1 border-b border-white/5">EXPERTISE</a>
-            <a href="#projects" onClick={() => setMobileMenuOpen(false)} className="text-slate-300 hover:text-amber-400 py-1 border-b border-white/5">PROJECTS</a>
-            <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="text-amber-400 py-1">CONTACT HIRE ME</a>
+          <div className="md:hidden bg-[#0b0f19]/95 backdrop-blur-2xl border-b border-white/10 px-6 py-6 flex flex-col gap-5 text-base font-bold shadow-2xl animate-fadeIn">
+            <a href="#about" onClick={() => setMobileMenuOpen(false)} className="text-slate-300 hover:text-cyan-400 py-2 border-b border-white/5">ABOUT</a>
+            <a href="#skills" onClick={() => setMobileMenuOpen(false)} className="text-slate-300 hover:text-cyan-400 py-2 border-b border-white/5">EXPERTISE</a>
+            <a href="#projects" onClick={() => setMobileMenuOpen(false)} className="text-slate-300 hover:text-cyan-400 py-2 border-b border-white/5">PROJECTS</a>
+            <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="text-cyan-400 py-2">CONTACT & HIRE ME</a>
           </div>
         )}
       </header>
 
-      {/* HERO SECTION WITH HOLOGRAPHIC PHOTO & CONFIDENCE WRITING */}
+      {/* HERO SECTION */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24 md:py-32 grid grid-cols-1 md:grid-cols-12 gap-12 items-center relative z-10">
         <div className="md:col-span-7 text-center md:text-left">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-amber-400 text-[11px] sm:text-xs font-bold mb-6 tracking-widest uppercase shadow-2xl backdrop-blur-md">
-            <Activity className="w-3.5 h-3.5 text-amber-400 animate-pulse" /> FULL-STACK ARCHITECT & BACKEND SPECIALIST
+          <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs font-bold mb-6 tracking-widest uppercase shadow-2xl backdrop-blur-md">
+            <Activity className="w-4 h-4 text-cyan-400 animate-pulse" /> FULL-STACK ARCHITECT & BACKEND SPECIALIST
           </div>
           
           <h1 className="text-3xl sm:text-5xl lg:text-7xl font-black tracking-tight mb-6 leading-tight sm:leading-none">
             Architecting <br className="hidden sm:inline" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-violet-500">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-indigo-400 to-fuchsia-500">
               High-Throughput
             </span> <br className="hidden sm:inline" />
             Systems & Interfaces.
           </h1>
           
-          <div className="p-5 sm:p-8 bg-gradient-to-br from-white/[0.08] to-white/[0.02] border border-white/15 rounded-3xl mb-8 backdrop-blur-xl shadow-2xl relative text-left group hover:border-amber-500/50 transition-colors">
-            <div className="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-amber-400 to-violet-600 rounded-l-3xl"></div>
+          <div className="p-5 sm:p-8 bg-gradient-to-br from-white/[0.07] to-white/[0.02] border border-white/15 rounded-3xl mb-8 backdrop-blur-2xl shadow-2xl relative text-left group hover:border-cyan-400/50 transition-colors">
+            <div className="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-cyan-400 to-fuchsia-500 rounded-l-3xl"></div>
             <p className="text-slate-200 text-sm sm:text-lg leading-relaxed font-light italic">
-              "I don't just write code; I engineer resilient, enterprise-grade architecture. From blazing-fast microservices built in <strong className="text-amber-400 not-italic font-bold">Golang</strong> and <strong className="text-amber-400 not-italic font-bold">Node.js</strong> to sleek, reactive web apps in <strong className="text-violet-400 not-italic font-bold">React</strong>, I bridge deep backend execution with flawless user interaction."
+              "I don't just write code; I engineer resilient, enterprise-grade architecture. From blazing-fast microservices built in <strong className="text-cyan-400 not-italic font-bold">Golang</strong> and <strong className="text-cyan-400 not-italic font-bold">Node.js</strong> to sleek, reactive web apps in <strong className="text-fuchsia-400 not-italic font-bold">React</strong>, I bridge deep backend execution with flawless user interaction."
             </p>
           </div>
 
           <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 w-full">
             <a 
               href="#projects" 
-              className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-amber-400 via-orange-500 to-amber-500 text-black font-extrabold hover:brightness-110 transition-all flex items-center justify-center gap-2.5 shadow-2xl shadow-amber-500/25 transform hover:-translate-y-1 text-center"
+              className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-black font-extrabold hover:brightness-110 transition-all flex items-center justify-center gap-2.5 shadow-2xl shadow-cyan-500/30 transform hover:-translate-y-1 text-center"
             >
               Explore Portfolio <ChevronRight className="w-5 h-5" />
             </a>
             <a 
               href="#contact" 
-              className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-white/5 border border-white/15 text-slate-200 font-bold hover:bg-white/10 transition-all backdrop-blur-md text-center"
+              className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-white/5 border border-white/20 text-slate-200 font-bold hover:bg-white/10 hover:border-cyan-400/50 transition-all backdrop-blur-md text-center"
             >
               Direct Contact
             </a>
           </div>
         </div>
 
-        {/* Profile Photo Display with Holographic Frame */}
+        {/* Profile Photo Display with Glowing Cyber Frame */}
         <div className="md:col-span-5 flex justify-center w-full">
-          <div className="relative group w-full max-w-[300px] sm:max-w-sm">
-            <div className="absolute -inset-2 bg-gradient-to-r from-amber-500 via-violet-600 to-cyan-500 rounded-[35px] blur-2xl opacity-50 group-hover:opacity-90 transition duration-700 animate-pulse"></div>
-            <div className="relative w-full h-[380px] sm:h-[440px] rounded-3xl overflow-hidden border-2 border-white/25 bg-[#07070c] shadow-2xl">
+          <div className="relative group w-full max-w-[280px] sm:max-w-sm">
+            <div className="absolute -inset-3 bg-gradient-to-r from-cyan-500 via-indigo-600 to-fuchsia-500 rounded-[40px] blur-2xl opacity-60 group-hover:opacity-100 transition duration-700 animate-pulse"></div>
+            <div className="relative w-full h-[380px] sm:h-[450px] rounded-3xl overflow-hidden border-2 border-cyan-400/40 bg-[#0b0f19] shadow-2xl">
               <img 
                 src="/PHOTO-2026-08-09-23-34-02.jpg" 
                 alt="Christo Varghese" 
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 filter contrast-110 saturate-105 object-top"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 filter contrast-110 saturate-110 object-top"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#030305] via-transparent to-transparent opacity-90"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-[#070913] via-transparent to-transparent opacity-90"></div>
               <div className="absolute bottom-5 left-5 right-5">
-                <div className="p-3.5 sm:p-4 rounded-2xl bg-black/70 backdrop-blur-md border border-white/15 shadow-xl">
+                <div className="p-4 rounded-2xl bg-black/75 backdrop-blur-xl border border-cyan-500/30 shadow-xl">
                   <p className="text-white font-black text-base sm:text-lg tracking-wide">Christo Varghese</p>
-                  <p className="text-amber-400 text-[11px] sm:text-xs font-bold tracking-widest uppercase mt-0.5">Full-Stack & Backend Dev</p>
+                  <p className="text-cyan-400 text-[11px] sm:text-xs font-bold tracking-widest uppercase mt-0.5">Full-Stack & Backend Dev</p>
                 </div>
               </div>
             </div>
@@ -191,7 +189,7 @@ export default function App() {
       <section id="about" className="max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-24 border-t border-white/10 relative">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
-            <div className="inline-block text-xs font-bold text-amber-400 tracking-widest uppercase mb-3 px-3 py-1 rounded-md bg-amber-500/10 border border-amber-500/20">
+            <div className="inline-block text-xs font-bold text-cyan-400 tracking-widest uppercase mb-3 px-3.5 py-1 rounded-md bg-cyan-500/10 border border-cyan-500/30">
               BACKGROUND & DRIVE
             </div>
             <h2 className="text-2xl sm:text-4xl font-black tracking-tight mb-6">
@@ -204,32 +202,32 @@ export default function App() {
               My core capability rests on architecting maintainable MVC structures, eliminating application latencies, and deploying high-performance services via Docker, AWS, and Nginx infrastructure.
             </p>
             <div className="flex items-center">
-              <a href="https://github.com/CHRISTO25" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto px-6 py-3.5 bg-white/5 rounded-2xl border border-white/15 text-slate-200 hover:text-amber-400 hover:border-amber-500/50 transition-all text-sm font-bold flex items-center justify-center gap-2.5 shadow-lg">
-                <ExternalLink className="w-4 h-4 text-amber-400" /> GitHub Profile: @CHRISTO25
+              <a href="https://github.com/CHRISTO25" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto px-6 py-3.5 bg-white/5 rounded-2xl border border-white/20 text-slate-200 hover:text-cyan-400 hover:border-cyan-400/50 transition-all text-sm font-bold flex items-center justify-center gap-2.5 shadow-lg backdrop-blur-md">
+                <ExternalLink className="w-4 h-4 text-cyan-400" /> GitHub Profile: @CHRISTO25
               </a>
             </div>
           </div>
           
-          <div className="bg-gradient-to-br from-white/[0.07] to-white/[0.02] p-6 sm:p-10 rounded-[30px] border border-white/15 shadow-2xl backdrop-blur-xl relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-40 h-40 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+          <div className="bg-gradient-to-br from-white/[0.07] to-white/[0.02] p-6 sm:p-10 rounded-[30px] border border-white/15 shadow-2xl backdrop-blur-2xl relative overflow-hidden group hover:border-fuchsia-500/40 transition-colors">
+            <div className="absolute top-0 right-0 w-40 h-40 bg-fuchsia-500/10 rounded-full blur-3xl pointer-events-none"></div>
             <h3 className="text-xl sm:text-2xl font-black text-white mb-6 flex items-center gap-3">
-              <ShieldCheck className="w-6 h-6 sm:w-7 sm:h-7 text-amber-400 flex-shrink-0" /> Core Competencies
+              <ShieldCheck className="w-6 h-6 sm:w-7 sm:h-7 text-cyan-400 flex-shrink-0" /> Core Competencies
             </h3>
             <ul className="space-y-3.5 text-slate-300 font-medium text-sm sm:text-base">
-              <li className="flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/5">
-                <div className="w-2.5 h-2.5 rounded-full bg-amber-400 shadow-md shadow-amber-400/50 flex-shrink-0"></div> 
+              <li className="flex items-center gap-3 p-3.5 rounded-xl bg-white/5 border border-white/5 hover:bg-white/10 transition-colors">
+                <div className="w-2.5 h-2.5 rounded-full bg-cyan-400 shadow-md shadow-cyan-400/50 flex-shrink-0"></div> 
                 High-performance backend systems (Golang, Gin, Node.js)
               </li>
-              <li className="flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/5">
-                <div className="w-2.5 h-2.5 rounded-full bg-orange-400 shadow-md shadow-orange-400/50 flex-shrink-0"></div> 
+              <li className="flex items-center gap-3 p-3.5 rounded-xl bg-white/5 border border-white/5 hover:bg-white/10 transition-colors">
+                <div className="w-2.5 h-2.5 rounded-full bg-indigo-400 shadow-md shadow-indigo-400/50 flex-shrink-0"></div> 
                 Relational & NoSQL database architecture (PostgreSQL, MongoDB)
               </li>
-              <li className="flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/5">
-                <div className="w-2.5 h-2.5 rounded-full bg-violet-400 shadow-md shadow-violet-400/50 flex-shrink-0"></div> 
+              <li className="flex items-center gap-3 p-3.5 rounded-xl bg-white/5 border border-white/5 hover:bg-white/10 transition-colors">
+                <div className="w-2.5 h-2.5 rounded-full bg-fuchsia-400 shadow-md shadow-fuchsia-400/50 flex-shrink-0"></div> 
                 Dynamic frontends & component states (React, Redux, Tailwind)
               </li>
-              <li className="flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/5">
-                <div className="w-2.5 h-2.5 rounded-full bg-cyan-400 shadow-md shadow-cyan-400/50 flex-shrink-0"></div> 
+              <li className="flex items-center gap-3 p-3.5 rounded-xl bg-white/5 border border-white/5 hover:bg-white/10 transition-colors">
+                <div className="w-2.5 h-2.5 rounded-full bg-sky-400 shadow-md shadow-sky-400/50 flex-shrink-0"></div> 
                 Containerization & Routing (Docker, AWS, Nginx)
               </li>
             </ul>
@@ -240,7 +238,7 @@ export default function App() {
       {/* SKILLS SECTION */}
       <section id="skills" className="max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-24 border-t border-white/10">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <div className="inline-block text-xs font-bold text-amber-400 tracking-widest uppercase mb-3 px-3 py-1 rounded-md bg-amber-500/10 border border-amber-500/20">
+          <div className="inline-block text-xs font-bold text-cyan-400 tracking-widest uppercase mb-3 px-3.5 py-1 rounded-md bg-cyan-500/10 border border-cyan-500/30">
             TECHNICAL STACK
           </div>
           <h2 className="text-2xl sm:text-4xl font-black tracking-tight mb-4">Precision Frameworks & Tools</h2>
@@ -248,57 +246,57 @@ export default function App() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="bg-white/[0.03] border border-white/10 rounded-3xl p-6 sm:p-7 hover:border-amber-500/50 hover:bg-white/[0.06] transition-all duration-300 group shadow-xl">
-            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 mb-6 group-hover:scale-110 transition-transform">
+          <div className="bg-white/[0.03] border border-white/10 rounded-3xl p-6 sm:p-7 hover:border-cyan-400/60 hover:bg-white/[0.06] transition-all duration-300 group shadow-xl">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 mb-6 group-hover:scale-110 group-hover:rotate-6 transition-transform">
               <Server className="w-6 h-6 sm:w-7 sm:h-7" />
             </div>
             <h3 className="text-lg font-bold mb-4 text-white">Backend Systems</h3>
             <ul className="space-y-3 text-sm text-slate-400 font-medium">
               {skills.backend.map((item, idx) => (
                 <li key={idx} className="flex items-center gap-2.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-amber-400"></span> {item}
+                  <span className="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> {item}
                 </li>
               ))}
             </ul>
           </div>
 
-          <div className="bg-white/[0.03] border border-white/10 rounded-3xl p-6 sm:p-7 hover:border-violet-500/50 hover:bg-white/[0.06] transition-all duration-300 group shadow-xl">
-            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-violet-500/10 border border-violet-500/20 flex items-center justify-center text-violet-400 mb-6 group-hover:scale-110 transition-transform">
+          <div className="bg-white/[0.03] border border-white/10 rounded-3xl p-6 sm:p-7 hover:border-indigo-400/60 hover:bg-white/[0.06] transition-all duration-300 group shadow-xl">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400 mb-6 group-hover:scale-110 group-hover:rotate-6 transition-transform">
               <Layers className="w-6 h-6 sm:w-7 sm:h-7" />
             </div>
             <h3 className="text-lg font-bold mb-4 text-white">Frontend UI</h3>
             <ul className="space-y-3 text-sm text-slate-400 font-medium">
               {skills.frontend.map((item, idx) => (
                 <li key={idx} className="flex items-center gap-2.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-violet-400"></span> {item}
+                  <span className="w-1.5 h-1.5 rounded-full bg-indigo-400"></span> {item}
                 </li>
               ))}
             </ul>
           </div>
 
-          <div className="bg-white/[0.03] border border-white/10 rounded-3xl p-6 sm:p-7 hover:border-emerald-500/50 hover:bg-white/[0.06] transition-all duration-300 group shadow-xl">
-            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 mb-6 group-hover:scale-110 transition-transform">
+          <div className="bg-white/[0.03] border border-white/10 rounded-3xl p-6 sm:p-7 hover:border-fuchsia-400/60 hover:bg-white/[0.06] transition-all duration-300 group shadow-xl">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-fuchsia-500/10 border border-fuchsia-500/30 flex items-center justify-center text-fuchsia-400 mb-6 group-hover:scale-110 group-hover:rotate-6 transition-transform">
               <Database className="w-6 h-6 sm:w-7 sm:h-7" />
             </div>
             <h3 className="text-lg font-bold mb-4 text-white">Databases</h3>
             <ul className="space-y-3 text-sm text-slate-400 font-medium">
               {skills.database.map((item, idx) => (
                 <li key={idx} className="flex items-center gap-2.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> {item}
+                  <span className="w-1.5 h-1.5 rounded-full bg-fuchsia-400"></span> {item}
                 </li>
               ))}
             </ul>
           </div>
 
-          <div className="bg-white/[0.03] border border-white/10 rounded-3xl p-6 sm:p-7 hover:border-cyan-500/50 hover:bg-white/[0.06] transition-all duration-300 group shadow-xl">
-            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 mb-6 group-hover:scale-110 transition-transform">
+          <div className="bg-white/[0.03] border border-white/10 rounded-3xl p-6 sm:p-7 hover:border-sky-400/60 hover:bg-white/[0.06] transition-all duration-300 group shadow-xl">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-sky-500/10 border border-sky-500/30 flex items-center justify-center text-sky-400 mb-6 group-hover:scale-110 group-hover:rotate-6 transition-transform">
               <CpuIcon className="w-6 h-6 sm:w-7 sm:h-7" />
             </div>
             <h3 className="text-lg font-bold mb-4 text-white">DevOps & Tooling</h3>
             <ul className="space-y-3 text-sm text-slate-400 font-medium">
               {skills.devops.map((item, idx) => (
                 <li key={idx} className="flex items-center gap-2.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> {item}
+                  <span className="w-1.5 h-1.5 rounded-full bg-sky-400"></span> {item}
                 </li>
               ))}
             </ul>
@@ -310,7 +308,7 @@ export default function App() {
       <section id="projects" className="max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-24 border-t border-white/10">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
           <div>
-            <div className="inline-block text-xs font-bold text-amber-400 tracking-widest uppercase mb-3 px-3 py-1 rounded-md bg-amber-500/10 border border-amber-500/20">
+            <div className="inline-block text-xs font-bold text-cyan-400 tracking-widest uppercase mb-3 px-3.5 py-1 rounded-md bg-cyan-500/10 border border-cyan-500/30">
               PORTFOLIO HIGHLIGHTS
             </div>
             <h2 className="text-2xl sm:text-4xl font-black tracking-tight mb-2">Featured Projects</h2>
@@ -320,7 +318,7 @@ export default function App() {
             href="https://github.com/CHRISTO25" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="text-amber-400 hover:text-amber-300 font-bold flex items-center gap-2 text-sm group self-start md:self-auto"
+            className="text-cyan-400 hover:text-cyan-300 font-bold flex items-center gap-2 text-sm group self-start md:self-auto"
           >
             Explore All GitHub Repositories <ExternalLink className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </a>
@@ -330,18 +328,18 @@ export default function App() {
           {projects.map((project, index) => (
             <div 
               key={index} 
-              className="bg-gradient-to-b from-white/[0.06] to-white/[0.01] border border-white/10 rounded-[30px] overflow-hidden flex flex-col justify-between hover:border-amber-500/60 hover:shadow-2xl hover:shadow-amber-500/10 transition-all duration-500 group"
+              className="bg-gradient-to-b from-white/[0.07] to-white/[0.01] border border-white/15 rounded-[30px] overflow-hidden flex flex-col justify-between hover:border-cyan-400 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-500 group transform hover:-translate-y-1.5"
             >
               <div className="p-6 sm:p-8">
                 <div className="flex items-center justify-between mb-6">
-                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center shadow-inner group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white/5 border border-white/15 flex items-center justify-center shadow-inner group-hover:scale-110 group-hover:rotate-12 transition-transform">
                     {project.icon}
                   </div>
                   <a 
                     href={project.githubLink} 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="px-4 py-2.5 rounded-xl bg-white/5 border border-white/15 text-slate-200 hover:text-black hover:bg-amber-400 transition-all shadow-md flex items-center gap-2 text-xs font-black tracking-wider"
+                    className="px-4 py-2.5 rounded-xl bg-white/5 border border-white/20 text-slate-200 hover:text-black hover:bg-cyan-400 transition-all shadow-md flex items-center gap-2 text-xs font-black tracking-wider"
                     title="View Source on GitHub"
                   >
                     <span>GITHUB</span> <ExternalLink className="w-3.5 h-3.5" />
@@ -352,13 +350,13 @@ export default function App() {
                   {project.category}
                 </span>
 
-                <h3 className="text-xl sm:text-2xl font-black text-white mb-3 group-hover:text-amber-400 transition-colors">{project.title}</h3>
+                <h3 className="text-xl sm:text-2xl font-black text-white mb-3 group-hover:text-cyan-400 transition-colors">{project.title}</h3>
                 <p className="text-slate-400 text-sm leading-relaxed mb-6 font-light">{project.description}</p>
               </div>
 
-              <div className="px-6 sm:px-8 py-5 bg-black/50 border-t border-white/5 flex flex-wrap gap-2">
+              <div className="px-6 sm:px-8 py-5 bg-black/60 border-t border-white/10 flex flex-wrap gap-2">
                 {project.tech.map((t, i) => (
-                  <span key={i} className="text-xs px-3 py-1 rounded-lg bg-white/5 border border-white/5 text-slate-300 font-semibold">
+                  <span key={i} className="text-xs px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-slate-300 font-semibold">
                     {t}
                   </span>
                 ))}
@@ -372,7 +370,7 @@ export default function App() {
       <section id="contact" className="max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-24 border-t border-white/10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>
-            <div className="inline-block text-xs font-bold text-amber-400 tracking-widest uppercase mb-3 px-3 py-1 rounded-md bg-amber-500/10 border border-amber-500/20">
+            <div className="inline-block text-xs font-bold text-cyan-400 tracking-widest uppercase mb-3 px-3.5 py-1 rounded-md bg-cyan-500/10 border border-cyan-500/30">
               GET IN TOUCH
             </div>
             <h2 className="text-3xl sm:text-4xl font-black tracking-tight mb-4">Let's Build Together</h2>
@@ -380,24 +378,24 @@ export default function App() {
               Open for full-stack software development roles, high-scale backend engineering opportunities, and exciting collaborative projects. Reach out directly!
             </p>
             <div className="space-y-4 text-slate-300">
-              <div className="flex items-center gap-4 p-4 sm:p-5 rounded-2xl bg-white/[0.03] border border-white/10 shadow-xl backdrop-blur-md">
-                <div className="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 flex-shrink-0">
+              <div className="flex items-center gap-4 p-4 sm:p-5 rounded-2xl bg-white/[0.04] border border-white/15 shadow-xl backdrop-blur-md group hover:border-cyan-400/50 transition-colors">
+                <div className="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 flex-shrink-0 group-hover:scale-110 transition-transform">
                   <Mail className="w-6 h-6" />
                 </div>
                 <div className="overflow-hidden">
                   <p className="text-xs text-slate-500 uppercase tracking-widest font-black">Direct Email</p>
-                  <a href="mailto:christovarghese2275@gmail.com" className="text-xs sm:text-sm font-bold hover:text-amber-400 transition-colors truncate block">christovarghese2275@gmail.com</a>
+                  <a href="mailto:christovarghese2275@gmail.com" className="text-xs sm:text-sm font-bold hover:text-cyan-400 transition-colors truncate block">christovarghese2275@gmail.com</a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-white/[0.07] to-white/[0.02] border border-white/15 rounded-[30px] p-6 sm:p-10 backdrop-blur-2xl shadow-2xl relative">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-violet-500/10 rounded-full blur-2xl pointer-events-none"></div>
+          <div className="bg-gradient-to-br from-white/[0.08] to-white/[0.02] border border-white/15 rounded-[30px] p-6 sm:p-10 backdrop-blur-2xl shadow-2xl relative group hover:border-cyan-400/30 transition-colors">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-fuchsia-500/15 rounded-full blur-2xl pointer-events-none"></div>
             
             {state.succeeded ? (
               <div className="h-full flex flex-col items-center justify-center text-center py-16">
-                <CheckCircle2 className="w-16 h-16 text-amber-400 mb-4 animate-bounce" />
+                <CheckCircle2 className="w-16 h-16 text-cyan-400 mb-4 animate-bounce" />
                 <h3 className="text-xl sm:text-2xl font-black text-white mb-2">Message Dispatched Successfully!</h3>
                 <p className="text-slate-400 text-sm">Thank you for connecting. I have received your message and will respond shortly.</p>
               </div>
@@ -411,7 +409,7 @@ export default function App() {
                     name="name"
                     required 
                     placeholder="John Doe" 
-                    className="w-full bg-[#030305] border border-white/15 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-amber-400 transition-colors text-sm shadow-inner font-medium"
+                    className="w-full bg-[#05070f] border border-white/20 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-cyan-400 transition-colors text-sm shadow-inner font-medium"
                   />
                   <ValidationError prefix="Name" field="name" errors={state.errors} className="text-rose-400 text-xs mt-1" />
                 </div>
@@ -424,7 +422,7 @@ export default function App() {
                     name="email"
                     required 
                     placeholder="john@example.com" 
-                    className="w-full bg-[#030305] border border-white/15 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-amber-400 transition-colors text-sm shadow-inner font-medium"
+                    className="w-full bg-[#05070f] border border-white/20 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-cyan-400 transition-colors text-sm shadow-inner font-medium"
                   />
                   <ValidationError prefix="Email" field="email" errors={state.errors} className="text-rose-400 text-xs mt-1" />
                 </div>
@@ -437,7 +435,7 @@ export default function App() {
                     name="message"
                     required 
                     placeholder="Discuss project requirements, roles, or collaboration..." 
-                    className="w-full bg-[#030305] border border-white/15 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-amber-400 transition-colors text-sm resize-none shadow-inner font-medium"
+                    className="w-full bg-[#05070f] border border-white/20 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-cyan-400 transition-colors text-sm resize-none shadow-inner font-medium"
                   ></textarea>
                   <ValidationError prefix="Message" field="message" errors={state.errors} className="text-rose-400 text-xs mt-1" />
                 </div>
@@ -445,7 +443,7 @@ export default function App() {
                 <button 
                   type="submit" 
                   disabled={state.submitting}
-                  className="w-full py-4 rounded-2xl bg-gradient-to-r from-amber-400 via-orange-500 to-amber-500 text-black font-black hover:brightness-110 transition-all flex items-center justify-center gap-2.5 shadow-xl shadow-amber-500/20 transform hover:-translate-y-0.5 tracking-wider uppercase text-sm disabled:opacity-50"
+                  className="w-full py-4 rounded-2xl bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 text-black font-black hover:brightness-110 transition-all flex items-center justify-center gap-2.5 shadow-xl shadow-cyan-500/30 transform hover:-translate-y-0.5 tracking-wider uppercase text-sm disabled:opacity-50 cursor-pointer"
                 >
                   {state.submitting ? "Sending..." : "Send Message"} <Send className="w-4 h-4" />
                 </button>
