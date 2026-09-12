@@ -4,14 +4,23 @@ import {
   Sparkles, Download, ChevronRight, ExternalLink, Mail, Send, 
   Menu, X, Check, Server, Layers, Database, CpuIcon, 
   GraduationCap, Radio, Network, Wifi, Lock, GitBranch,
-  ArrowUpRight, Award, Video, ShieldCheck, Zap, Code2, Globe, Terminal
+  ArrowUpRight, Award, Video, ShieldCheck, Zap, Code2, Globe, Terminal, Activity
 } from 'lucide-react';
 
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeFilter, setActiveFilter] = useState('all');
   const [copiedEmail, setCopiedEmail] = useState(false);
+  const [pingLatency, setPingLatency] = useState(12);
   const [state, handleSubmit] = useForm("mqpzpeod");
+
+  // Dynamic Real-Time Micro-Jitter for Live Telemetry
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setPingLatency(Math.floor(Math.random() * 5) + 11);
+    }, 2800);
+    return () => clearInterval(interval);
+  }, []);
 
   const copyEmailToClipboard = () => {
     navigator.clipboard.writeText("christovarghese2275@gmail.com");
@@ -148,52 +157,42 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#02050e] text-slate-100 font-sans selection:bg-indigo-600/40 selection:text-white relative overflow-x-hidden antialiased">
       
-      {/* Dynamic Keyframe Style Injections */}
+      {/* Precision Kinetic CSS Animations */}
       <style>{`
         @keyframes floatSlow {
           0%, 100% { transform: translateY(0px) rotate(0deg); }
-          50% { transform: translateY(-12px) rotate(4deg); }
+          50% { transform: translateY(-8px) rotate(2deg); }
         }
         @keyframes floatReverse {
           0%, 100% { transform: translateY(0px) rotate(0deg); }
-          50% { transform: translateY(12px) rotate(-4deg); }
+          50% { transform: translateY(8px) rotate(-2deg); }
         }
         @keyframes capToss {
           0%, 100% { transform: translateY(0px) rotate(0deg); }
-          30% { transform: translateY(-18px) rotate(-14deg) scale(1.1); }
-          60% { transform: translateY(-6px) rotate(8deg); }
+          30% { transform: translateY(-16px) rotate(-12deg) scale(1.08); }
+          60% { transform: translateY(-5px) rotate(6deg); }
         }
         @keyframes capFloat {
           0%, 100% { transform: translateY(0px) rotate(0deg); }
-          50% { transform: translateY(-10px) rotate(-6deg); }
+          50% { transform: translateY(-8px) rotate(-4deg); }
         }
         @keyframes beamMoveHorizontal {
           0% { transform: translateX(-100%); }
           100% { transform: translateX(200%); }
         }
-        @keyframes beamMoveVertical {
+        @keyframes beamBackdropVertical {
           0% { transform: translateY(-100%); }
           100% { transform: translateY(200%); }
         }
-        @keyframes pulseGlow {
-          0%, 100% { opacity: 0.35; transform: scale(1); }
-          50% { opacity: 0.8; transform: scale(1.08); }
-        }
-        @keyframes orbitSpin {
-          0% { transform: rotate(0deg); }
-          100% { transform: rotate(360deg); }
-        }
-        .animate-float-slow { animation: floatSlow 6s ease-in-out infinite; }
-        .animate-float-reverse { animation: floatReverse 7s ease-in-out infinite; }
-        .animate-cap-toss { animation: capToss 3.5s ease-in-out infinite; }
-        .animate-cap-float { animation: capFloat 5s ease-in-out infinite; }
-        .animate-beam-h { animation: beamMoveHorizontal 3.5s cubic-bezier(0.4, 0, 0.2, 1) infinite; }
-        .animate-beam-v { animation: beamMoveVertical 5s cubic-bezier(0.4, 0, 0.2, 1) infinite; }
-        .animate-pulse-glow { animation: pulseGlow 4s ease-in-out infinite; }
-        .animate-orbit { animation: orbitSpin 16s linear infinite; }
+        .animate-float-slow { animation: floatSlow 5s ease-in-out infinite; }
+        .animate-float-reverse { animation: floatReverse 6s ease-in-out infinite; }
+        .animate-cap-toss { animation: capToss 3.2s ease-in-out infinite; }
+        .animate-cap-float { animation: capFloat 4.5s ease-in-out infinite; }
+        .animate-beam-h { animation: beamMoveHorizontal 3.2s cubic-bezier(0.4, 0, 0.2, 1) infinite; }
+        .animate-beam-bg { animation: beamBackdropVertical 4.5s cubic-bezier(0.4, 0, 0.2, 1) infinite; }
       `}</style>
 
-      {/* Atmospheric Background Ambient Radiance & Dynamic Grid */}
+      {/* Atmospheric Background Ambient Radiance */}
       <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
         <div className="absolute -top-32 left-1/4 w-[600px] sm:w-[900px] h-[600px] sm:h-[900px] bg-indigo-600/15 rounded-full blur-[160px] animate-pulse"></div>
         <div className="absolute top-1/3 -right-32 w-[500px] sm:w-[750px] h-[500px] sm:h-[750px] bg-blue-600/10 rounded-full blur-[180px]"></div>
@@ -201,7 +200,7 @@ export default function App() {
         <div className="absolute inset-0 bg-[radial-gradient(#ffffff08_1px,transparent_1px)] [background-size:28px_28px] opacity-75"></div>
       </div>
 
-      {/* Top Telemetry & Status Bar */}
+      {/* Top Live Telemetry & Status Bar */}
       <div className="w-full bg-[#030816]/95 backdrop-blur-xl border-b border-slate-800/80 py-2.5 px-4 sm:px-8 text-xs relative z-50">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3 text-slate-400">
           <div className="flex items-center gap-2.5">
@@ -220,7 +219,7 @@ export default function App() {
             </span>
             <span className="text-slate-700">|</span>
             <span className="text-slate-300">
-              Signaling: <strong className="text-indigo-300">&lt;15ms RTT</strong>
+              Signaling: <strong className="text-indigo-300">&lt;{pingLatency}ms RTT</strong>
             </span>
           </div>
         </div>
@@ -344,63 +343,69 @@ export default function App() {
 
         </div>
 
-        {/* Right Column: Interactive Profile Visual with Floating Motion Orbs */}
-        <div className="lg:col-span-5 flex justify-center w-full relative">
+        {/* Right Column: Interactive Profile Visual with Floating Motion Orbs (Fully Visible On Mobile) */}
+        <div className="lg:col-span-5 flex justify-center w-full relative pt-8 sm:pt-0">
           
-          {/* Floating Kinetic Tech Pill 1 */}
-          <div className="hidden sm:flex absolute -top-6 -left-8 z-30 animate-float-slow items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-[#030816]/95 border border-indigo-500/40 backdrop-blur-xl shadow-2xl">
-            <Radio className="w-4 h-4 text-indigo-400 animate-pulse" />
+          {/* Floating Kinetic Tech Pill 1: Top-Left */}
+          <div className="flex absolute -top-4 sm:-top-6 -left-2 sm:-left-8 z-30 animate-float-slow items-center gap-2 sm:gap-2.5 px-3 sm:px-4 py-1.5 sm:py-2.5 rounded-2xl bg-[#030816]/95 border border-indigo-500/40 backdrop-blur-xl shadow-2xl">
+            <Radio className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-indigo-400 animate-pulse shrink-0" />
             <div className="text-left">
-              <p className="text-[10px] uppercase font-mono font-bold text-slate-400">WebRTC Mesh</p>
-              <p className="text-xs font-bold text-white">Sub-second P2P</p>
+              <p className="text-[8px] sm:text-[10px] uppercase font-mono font-bold text-slate-400">WebRTC Mesh</p>
+              <p className="text-[10px] sm:text-xs font-bold text-white whitespace-nowrap">Sub-second P2P</p>
             </div>
           </div>
 
-          {/* Floating Kinetic Tech Pill 2 */}
-          <div className="hidden sm:flex absolute -bottom-6 -right-6 z-30 animate-float-reverse items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-[#030816]/95 border border-blue-500/40 backdrop-blur-xl shadow-2xl">
-            <Server className="w-4 h-4 text-blue-400" />
+          {/* Floating Kinetic Tech Pill 2: Bottom-Right */}
+          <div className="flex absolute -bottom-4 sm:-bottom-6 -right-2 sm:-right-6 z-30 animate-float-reverse items-center gap-2 sm:gap-2.5 px-3 sm:px-4 py-1.5 sm:py-2.5 rounded-2xl bg-[#030816]/95 border border-blue-500/40 backdrop-blur-xl shadow-2xl">
+            <Server className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-blue-400 shrink-0" />
             <div className="text-left">
-              <p className="text-[10px] uppercase font-mono font-bold text-slate-400">Golang Microservices</p>
-              <p className="text-xs font-bold text-white">Concurrent Goroutines</p>
+              <p className="text-[8px] sm:text-[10px] uppercase font-mono font-bold text-slate-400">Golang Microservices</p>
+              <p className="text-[10px] sm:text-xs font-bold text-white whitespace-nowrap">Goroutines</p>
             </div>
           </div>
 
-          {/* Floating Kinetic Tech Pill 3 (Front-End Presence) */}
-          <div className="hidden sm:flex absolute top-1/2 -right-10 z-30 animate-float-slow items-center gap-2 px-3.5 py-2 rounded-2xl bg-[#030816]/95 border border-violet-500/40 backdrop-blur-xl shadow-2xl">
-            <Code2 className="w-4 h-4 text-violet-400" />
+          {/* Floating Kinetic Tech Pill 3: Mid-Right */}
+          <div className="flex absolute top-1/2 -right-3 sm:-right-10 z-30 animate-float-slow items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3.5 py-1.5 sm:py-2 rounded-2xl bg-[#030816]/95 border border-violet-500/40 backdrop-blur-xl shadow-2xl">
+            <Code2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-violet-400 shrink-0" />
             <div className="text-left">
-              <p className="text-[10px] uppercase font-mono font-bold text-slate-400">React & Redux</p>
-              <p className="text-xs font-bold text-white">Reactive UI/UX</p>
+              <p className="text-[8px] sm:text-[10px] uppercase font-mono font-bold text-slate-400">React & Redux</p>
+              <p className="text-[10px] sm:text-xs font-bold text-white whitespace-nowrap">Reactive UI</p>
             </div>
           </div>
 
           {/* Main Card Container */}
           <div className="relative group w-full max-w-sm sm:max-w-md">
-            <div className="absolute -inset-2 bg-gradient-to-tr from-indigo-500/40 via-blue-500/30 to-violet-500/40 rounded-[36px] blur-2xl opacity-60 group-hover:opacity-95 group-hover:scale-105 transition-all duration-700"></div>
+            
+            {/* Ambient Multi-Hue Aura Behind Card */}
+            <div className="absolute -inset-2 bg-gradient-to-tr from-indigo-500/40 via-blue-500/30 to-violet-500/40 rounded-[36px] blur-2xl opacity-60 group-hover:opacity-95 group-hover:scale-105 transition-all duration-700 pointer-events-none"></div>
 
-            <div className="relative rounded-[32px] overflow-hidden border border-slate-700/80 bg-gradient-to-b from-slate-900/90 to-[#02050e] shadow-2xl p-3">
+            {/* Kinetic Light Sweep Placed Strictly Behind Card Housing */}
+            <div className="absolute -inset-1 rounded-[36px] overflow-hidden pointer-events-none z-0">
+              <div className="w-full h-4 bg-gradient-to-r from-transparent via-indigo-400/50 to-transparent animate-beam-bg"></div>
+            </div>
+
+            <div className="relative z-10 rounded-[32px] overflow-hidden border border-slate-700/80 bg-gradient-to-b from-slate-900/90 to-[#02050e] shadow-2xl p-3">
               
               <div className="relative h-[410px] sm:h-[470px] rounded-[24px] overflow-hidden bg-slate-950">
+                
+                {/* Clean Photo Without Overlapping Lines */}
                 <img 
                   src="/PHOTO-2026-08-09-23-34-02.jpg" 
                   alt="Christo Varghese" 
-                  className="w-full h-full object-cover object-top filter contrast-[1.06] brightness-[1.02] group-hover:scale-105 transition-transform duration-700"
+                  className="w-full h-full object-cover object-top filter contrast-[1.06] brightness-[1.02] group-hover:scale-105 transition-transform duration-700 relative z-10"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#02050e] via-[#02050e]/20 to-transparent opacity-95"></div>
-
-                {/* Animated Light Sweep over the photo */}
-                <div className="absolute inset-0 pointer-events-none overflow-hidden">
-                  <div className="w-full h-2.5 bg-gradient-to-r from-transparent via-indigo-400/50 to-transparent -translate-y-full animate-beam-v"></div>
-                </div>
+                
+                {/* Natural Dark Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#02050e] via-[#02050e]/20 to-transparent opacity-95 z-20 pointer-events-none"></div>
 
                 {/* Top Status Badge */}
-                <div className="absolute top-4 left-4 backdrop-blur-xl bg-black/60 border border-white/10 px-3.5 py-1.5 rounded-full flex items-center gap-2 shadow-lg">
+                <div className="absolute top-4 left-4 backdrop-blur-xl bg-black/60 border border-white/10 px-3.5 py-1.5 rounded-full flex items-center gap-2 shadow-lg z-30">
                   <span className="h-2 w-2 rounded-full bg-emerald-400 animate-ping"></span>
                   <span className="text-[11px] font-semibold text-slate-200">Active Engineer</span>
                 </div>
 
                 {/* Card Bottom Meta */}
-                <div className="absolute bottom-4 left-4 right-4 backdrop-blur-xl bg-slate-950/85 border border-slate-800/90 p-4 rounded-2xl shadow-xl">
+                <div className="absolute bottom-4 left-4 right-4 backdrop-blur-xl bg-slate-950/85 border border-slate-800/90 p-4 rounded-2xl shadow-xl z-30">
                   <div className="flex items-center justify-between">
                     <div>
                       <p className="text-white font-bold text-base">Christo Varghese</p>
@@ -838,7 +843,6 @@ export default function App() {
             {/* Animated Cap Mascot Container */}
             <div className="relative shrink-0 flex flex-col items-center">
               <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-3xl bg-gradient-to-tr from-indigo-600 via-blue-600 to-violet-500 flex items-center justify-center text-white shadow-2xl shadow-indigo-600/40 relative group-hover:scale-105 transition-transform duration-300">
-                {/* Floating Cap Icon */}
                 <GraduationCap className="w-10 h-10 sm:w-12 sm:h-12 text-white animate-cap-toss drop-shadow-md" />
                 
                 {/* Orbiting Sparkle Star */}
