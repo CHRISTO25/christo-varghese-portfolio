@@ -5,7 +5,7 @@ import {
   Menu, X, Check, Server, Layers, Database, CpuIcon, 
   GraduationCap, Radio, Network, Wifi, Lock, GitBranch,
   ArrowUpRight, Award, Video, ShieldCheck, Zap, Code2, Globe, Terminal, Activity,
-  FastForward, BookOpen, RefreshCw, Compass
+  FastForward, BookOpen, RefreshCw, Compass, Crown, Flame
 } from 'lucide-react';
 
 export default function App() {
@@ -17,7 +17,11 @@ export default function App() {
   const [capTossed, setCapTossed] = useState(false);
   const [globeAngle, setGlobeAngle] = useState(23.5);
   const [isRotatingFast, setIsRotatingFast] = useState(false);
-  const [isLogoRunning, setIsLogoRunning] = useState(false);
+  
+  // High-Tech Cyber Warfare Animation States
+  const [battlePhase, setBattlePhase] = useState('idle'); // 'idle' | 'war' | 'triumph' | 'crowned'
+  const [hasCrown, setHasCrown] = useState(false);
+  
   const [state, handleSubmit] = useForm("mqpzpeod");
 
   // Dynamic live ping telemetry
@@ -36,9 +40,28 @@ export default function App() {
     setTimeout(() => setCapTossed(false), 2400);
   };
 
-  const triggerLogoRun = () => {
-    setIsLogoRunning(true);
-    setTimeout(() => setIsLogoRunning(false), 2600);
+  const triggerEpicBattle = () => {
+    if (battlePhase !== 'idle') return;
+    
+    // Stage 1: Brandish flaming cyber blade & sprint forward
+    setBattlePhase('war');
+
+    // Stage 2: Vanquish Go & Node, capture the Royal Crown
+    setTimeout(() => {
+      setBattlePhase('triumph');
+    }, 2400);
+
+    // Stage 3: Return to Throne and crown 'C'
+    setTimeout(() => {
+      setBattlePhase('crowned');
+      setHasCrown(true);
+    }, 3200);
+
+    // Stage 4: Fade crown and resume idle stance
+    setTimeout(() => {
+      setBattlePhase('idle');
+      setHasCrown(false);
+    }, 5200);
   };
 
   const copyEmailToClipboard = () => {
@@ -181,7 +204,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#02050e] text-slate-100 font-sans selection:bg-indigo-600/40 selection:text-white relative overflow-x-hidden antialiased pt-20">
       
-      {/* Precision Kinetic CSS Animations */}
+      {/* Precision Kinetic CSS Animations & Left-Mounted Fiery Broadsword Mechanics */}
       <style>{`
         @keyframes floatSlow {
           0%, 100% { transform: translateY(0px) rotate(0deg); }
@@ -220,6 +243,35 @@ export default function App() {
           0% { transform: rotate(0deg); }
           100% { transform: rotate(360deg); }
         }
+        @keyframes spinReverse {
+          0% { transform: rotate(360deg); }
+          100% { transform: rotate(0deg); }
+        }
+        @keyframes radarSweep {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+        @keyframes pulseRing {
+          0% { transform: scale(0.85); opacity: 0.8; }
+          50% { transform: scale(1.25); opacity: 0.2; }
+          100% { transform: scale(0.85); opacity: 0.8; }
+        }
+        @keyframes towerBeaconPulse {
+          0%, 100% { transform: scale(0.9); opacity: 0.3; }
+          50% { transform: scale(1.4); opacity: 0.9; }
+        }
+        @keyframes signalRingExpand {
+          0% { transform: scale(0.4); opacity: 0.9; }
+          100% { transform: scale(2.2); opacity: 0; }
+        }
+        @keyframes circuitFloatY {
+          0% { transform: translateY(-100%); }
+          100% { transform: translateY(200%); }
+        }
+        @keyframes circuitFloatX {
+          0% { transform: translateX(-100%); }
+          100% { transform: translateX(200%); }
+        }
         @keyframes globeSpinY {
           0% { transform: rotateY(0deg); }
           100% { transform: rotateY(360deg); }
@@ -236,22 +288,60 @@ export default function App() {
           0%, 100% { transform: rotateY(0deg); }
           50% { transform: rotateY(-170deg); }
         }
-        @keyframes logoSprintEscape {
-          0% { transform: translateX(0) scale(1) rotate(0deg); opacity: 1; }
-          20% { transform: translateX(-12px) scale(0.9) rotate(-15deg); }
-          50% { transform: translateX(160px) translateY(-10px) scale(0.65) rotate(45deg); opacity: 0; }
-          70% { transform: translateX(-160px) scale(0.2) rotate(-90deg); opacity: 0; }
-          85% { transform: translateX(-20px) scale(0.9) rotate(-10deg); opacity: 1; }
-          100% { transform: translateX(0) scale(1) rotate(0deg); opacity: 1; }
+
+        /* ⚔️ AUTHENTIC LEFT-SIDE FLAMING SWORD STANCE (Pointing Away from Name) */
+        @keyframes idleSwordLeft {
+          0%, 100% { transform: rotate(-28deg) translateY(0); filter: drop-shadow(-3px -3px 8px rgba(249,115,22,0.85)); }
+          50% { transform: rotate(-38deg) translateY(-2px); filter: drop-shadow(-4px -4px 14px rgba(239,68,68,1)); }
+        }
+        @keyframes flameFlickerLeft {
+          0%, 100% { opacity: 0.85; transform: scaleY(1) scaleX(1); }
+          50% { opacity: 1; transform: scaleY(1.4) scaleX(1.2) rotate(-6deg); }
+        }
+        @keyframes swordSlashAttackLeft {
+          0% { transform: rotate(-25deg) scale(1); }
+          30% { transform: rotate(-90deg) scale(1.3); }
+          70% { transform: rotate(55deg) scale(1.35); }
+          100% { transform: rotate(-28deg) scale(1); }
+        }
+        @keyframes sprintToWar {
+          0% { transform: translateX(0) scale(1); }
+          25% { transform: translateX(65px) scale(1.12) rotate(14deg); }
+          50% { transform: translateX(130px) scale(1.24) rotate(-8deg); }
+          75% { transform: translateX(180px) scale(1.15) rotate(18deg); }
+          90% { transform: translateX(70px) scale(1.05) rotate(-4deg); }
+          100% { transform: translateX(0) scale(1) rotate(0deg); }
+        }
+        @keyframes defeatGo {
+          0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 1; }
+          35% { transform: translate(35px, -45px) rotate(180deg) scale(1.2); opacity: 1; }
+          100% { transform: translate(150px, -120px) rotate(420deg) scale(0.2); opacity: 0; }
+        }
+        @keyframes defeatNode {
+          0% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 1; }
+          35% { transform: translate(45px, 40px) rotate(-180deg) scale(1.2); opacity: 1; }
+          100% { transform: translate(170px, 130px) rotate(-460deg) scale(0.2); opacity: 0; }
+        }
+        @keyframes crownCarryInHand {
+          0% { transform: translateY(16px) scale(0.6) rotate(25deg); opacity: 0; }
+          50% { transform: translateY(8px) scale(0.9) rotate(-10deg); opacity: 1; }
+          100% { transform: translateY(-16px) scale(1) rotate(0deg); opacity: 1; }
+        }
+        @keyframes crownDescend {
+          0% { transform: translateY(-24px) scale(1.3) rotate(-15deg); opacity: 0; }
+          60% { transform: translateY(2px) scale(1.15) rotate(4deg); opacity: 1; }
+          80% { transform: translateY(-2px) scale(0.98) rotate(-2deg); }
+          100% { transform: translateY(0) scale(1) rotate(0deg); opacity: 1; }
         }
         @keyframes legRunLeft {
-          0%, 100% { transform: rotate(25deg); }
-          50% { transform: rotate(-35deg); }
+          0%, 100% { transform: rotate(35deg); }
+          50% { transform: rotate(-45deg); }
         }
         @keyframes legRunRight {
-          0%, 100% { transform: rotate(-35deg); }
-          50% { transform: rotate(25deg); }
+          0%, 100% { transform: rotate(-45deg); }
+          50% { transform: rotate(35deg); }
         }
+
         .animate-float-slow { animation: floatSlow 5s ease-in-out infinite; }
         .animate-float-reverse { animation: floatReverse 6s ease-in-out infinite; }
         .animate-extreme-cap { animation: extremeCapToss 2.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
@@ -260,13 +350,29 @@ export default function App() {
         .animate-transit-turbo { animation: transitTrainTurbo 1.1s cubic-bezier(0.4, 0, 0.2, 1) infinite; }
         .animate-laser-v { animation: laserSweepVertical 3.8s cubic-bezier(0.4, 0, 0.2, 1) infinite; }
         .animate-spin-slow { animation: spinSlow 14s linear infinite; }
+        .animate-spin-reverse { animation: spinReverse 20s linear infinite; }
+        .animate-radar-sweep { animation: radarSweep 5s linear infinite; }
+        .animate-pulse-ring { animation: pulseRing 3.5s ease-in-out infinite; }
+        .animate-tower-pulse { animation: towerBeaconPulse 2s ease-in-out infinite; }
+        .animate-signal-ring { animation: signalRingExpand 2.8s cubic-bezier(0.2, 0.8, 0.2, 1) infinite; }
+        .animate-circuit-y { animation: circuitFloatY 3.5s linear infinite; }
+        .animate-circuit-x { animation: circuitFloatX 4s linear infinite; }
         .animate-orbit-dot { animation: orbitSatellite 4s linear infinite; }
         .animate-page-flip { animation: pageTurnAction 2.2s ease-in-out infinite; transform-origin: left center; }
         .animate-globe-spin { animation: globeSpinY 16s linear infinite; transform-style: preserve-3d; }
         .animate-globe-fast { animation: globeSpinYFast 3s cubic-bezier(0.1, 0.9, 0.2, 1) forwards; transform-style: preserve-3d; }
-        .animate-logo-escape { animation: logoSprintEscape 2.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
-        .animate-leg-l { animation: legRunLeft 0.22s infinite alternate ease-in-out; transform-origin: top center; }
-        .animate-leg-r { animation: legRunRight 0.22s infinite alternate ease-in-out; transform-origin: top center; }
+        
+        /* Left-Sided Real Blade Animations */
+        .animate-sword-left-idle { animation: idleSwordLeft 2.5s ease-in-out infinite; transform-origin: 50% 90%; }
+        .animate-sword-left-slash { animation: swordSlashAttackLeft 0.35s ease-in-out infinite; transform-origin: 50% 90%; }
+        .animate-flame-left { animation: flameFlickerLeft 0.22s infinite alternate ease-in-out; }
+        .animate-sprint-war { animation: sprintToWar 2.2s cubic-bezier(0.2, 0.9, 0.3, 1) forwards; }
+        .animate-throw-go { animation: defeatGo 1.8s cubic-bezier(0.1, 0.8, 0.2, 1) forwards; }
+        .animate-throw-node { animation: defeatNode 1.8s cubic-bezier(0.1, 0.8, 0.2, 1) 0.3s forwards; }
+        .animate-crown-hand { animation: crownCarryInHand 0.8s ease-out forwards; }
+        .animate-crown-head { animation: crownDescend 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
+        .animate-leg-l { animation: legRunLeft 0.14s infinite alternate ease-in-out; transform-origin: top center; }
+        .animate-leg-r { animation: legRunRight 0.14s infinite alternate ease-in-out; transform-origin: top center; }
       `}</style>
 
       {/* Atmospheric Background Ambient Radiance */}
@@ -305,36 +411,112 @@ export default function App() {
         </div>
 
         {/* Primary Navbar */}
-        <header className="w-full backdrop-blur-2xl bg-[#02050e]/95 border-b border-slate-800/80 shadow-2xl">
-          <div className="max-w-7xl mx-auto px-4 sm:px-8 h-14 sm:h-16 flex items-center justify-between">
+        <header className="w-full backdrop-blur-2xl bg-[#02050e]/95 border-b border-slate-800/80 shadow-2xl relative">
+          <div className="max-w-7xl mx-auto px-4 sm:px-8 h-14 sm:h-16 flex items-center justify-between relative">
             
-            {/* Custom Cyber "C" Monogram with Interactive Running-Legs Escape Animation */}
+            {/* ⚔️ C LOGO WITH LEFT-MOUNTED REALISTIC FLAMING SWORD (Clear of Name text, No Overlapping) */}
             <div 
-              onClick={triggerLogoRun}
-              title="Touch me to see me run!"
-              className="flex items-center gap-2.5 group cursor-pointer select-none relative"
+              onClick={triggerEpicBattle}
+              title="Touch me! 'C' with its Flaming Sword will charge, defeat Go & Node, and crown itself King!"
+              className="flex items-center gap-3.5 group cursor-pointer select-none relative pl-2.5"
             >
-              <div className={`relative ${isLogoRunning ? 'animate-logo-escape' : 'hover:scale-110 active:scale-95 transition-transform'}`}>
-                {/* Outer Holographic Badge */}
-                <div className="h-8 w-8 sm:h-9 sm:w-9 rounded-xl bg-gradient-to-tr from-indigo-600 via-blue-600 to-cyan-400 flex items-center justify-center text-white shadow-lg shadow-indigo-600/40 border border-indigo-300/30 relative">
-                  
-                  {/* High-Tech Stylized 'C' Monogram with Neon Accents */}
-                  <div className="relative font-mono font-black text-sm sm:text-base tracking-tighter text-white drop-shadow-[0_0_8px_#38bdf8]">
-                    <span>C</span>
-                    <span className="absolute -top-0.5 -right-1 h-1.5 w-1.5 rounded-full bg-cyan-300 animate-ping"></span>
+              <div className={`relative z-20 ${battlePhase === 'war' ? 'animate-sprint-war' : 'hover:scale-110 active:scale-95 transition-transform'}`}>
+                
+                {/* 🗡️ AUTHENTIC REALISTIC BROADSWORD (Mounted on Left, Slanted Away from Text) */}
+                <div 
+                  className={`absolute -top-7 -left-5 z-30 pointer-events-none flex flex-col items-center select-none ${
+                    battlePhase === 'war' ? 'animate-sword-left-slash' : 'animate-sword-left-idle'
+                  }`}
+                  style={{ width: '28px', height: '54px' }}
+                >
+                  {/* Blazing Flame Sheath enveloping the Blade */}
+                  <div className="absolute -top-2 inset-x-0 flex justify-center pointer-events-none">
+                    <Flame className="w-5 h-6 text-amber-300 fill-orange-500 animate-flame-left filter drop-shadow-[0_0_12px_#ea580c]" />
                   </div>
 
-                  {/* Running cyber legs that appear and sprint when triggered */}
-                  {isLogoRunning && (
-                    <div className="absolute -bottom-2.5 inset-x-0 flex justify-around pointer-events-none">
-                      <div className="w-1 h-3 bg-cyan-300 rounded-full animate-leg-l shadow-[0_0_6px_#38bdf8]"></div>
-                      <div className="w-1 h-3 bg-indigo-400 rounded-full animate-leg-r shadow-[0_0_6px_#6366f1]"></div>
+                  {/* High-Grade Double-Edged Blade Tip & Spine */}
+                  <div className="relative w-2 h-7 bg-gradient-to-b from-white via-slate-100 to-slate-300 shadow-[0_0_10px_#f97316] rounded-t-full flex justify-center">
+                    {/* Fuller / Blood Groove */}
+                    <div className="w-0.5 h-5 bg-slate-500/80 rounded-full mt-1"></div>
+                  </div>
+
+                  {/* Golden-Winged Crossguard */}
+                  <div className="w-6 h-1 bg-gradient-to-r from-amber-500 via-amber-200 to-amber-500 rounded-sm shadow-[0_0_4px_#f59e0b] -mt-0.5 z-10 flex justify-between px-0.5">
+                    <div className="w-0.5 h-1.5 bg-amber-600 rounded-full -mt-0.5"></div>
+                    <div className="w-0.5 h-1.5 bg-amber-600 rounded-full -mt-0.5"></div>
+                  </div>
+
+                  {/* Leather Wrapped Grip / Hilt */}
+                  <div className="w-1.5 h-3 bg-gradient-to-b from-amber-950 via-amber-900 to-amber-950 rounded-sm flex flex-col justify-around py-0.5">
+                    <div className="w-full h-px bg-amber-600/50"></div>
+                    <div className="w-full h-px bg-amber-600/50"></div>
+                  </div>
+
+                  {/* Weighted Steel Pommel with Gem */}
+                  <div className="w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-amber-400 to-amber-200 border border-amber-600 shadow-[0_0_6px_#f59e0b] -mt-0.5 flex items-center justify-center">
+                    <div className="w-1 h-1 rounded-full bg-rose-600"></div>
+                  </div>
+                </div>
+
+                {/* 👑 Golden Royal Crown with Diamond & Ruby Red Gems */}
+                {battlePhase === 'triumph' && (
+                  <div className="absolute -bottom-2 -right-3 z-30 animate-crown-hand flex items-center justify-center">
+                    <div className="relative">
+                      <Crown className="w-5 h-5 text-amber-300 fill-amber-400 filter drop-shadow-[0_0_10px_#f59e0b]" />
+                      <span className="absolute top-[8px] left-[3px] w-1.5 h-1.5 rounded-full bg-rose-600 border border-white shadow-[0_0_6px_#f43f5e]"></span>
+                      <span className="absolute top-[5px] left-[8.5px] w-1.5 h-1.5 rounded-full bg-cyan-200 border border-white shadow-[0_0_8px_#38bdf8]"></span>
+                      <span className="absolute top-[8px] right-[3px] w-1.5 h-1.5 rounded-full bg-rose-600 border border-white shadow-[0_0_6px_#f43f5e]"></span>
+                    </div>
+                  </div>
+                )}
+
+                {hasCrown && (
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-30 pointer-events-none animate-crown-head flex flex-col items-center">
+                    <div className="relative">
+                      <Crown className="w-5 h-5 text-amber-300 fill-amber-400 filter drop-shadow-[0_0_10px_#f59e0b]" />
+                      <span className="absolute top-[8px] left-[3px] w-1.5 h-1.5 rounded-full bg-rose-600 border border-white shadow-[0_0_6px_#f43f5e]"></span>
+                      <span className="absolute top-[5px] left-[8.5px] w-1.5 h-1.5 rounded-full bg-cyan-200 border border-white shadow-[0_0_8px_#38bdf8]"></span>
+                      <span className="absolute top-[8px] right-[3px] w-1.5 h-1.5 rounded-full bg-rose-600 border border-white shadow-[0_0_6px_#f43f5e]"></span>
+                    </div>
+                  </div>
+                )}
+
+                {/* Outer Cyber Throne Armor for C */}
+                <div className={`h-9 w-9 sm:h-10 sm:w-10 rounded-2xl bg-gradient-to-tr from-[#050b1a] via-[#101b38] to-[#02050e] flex items-center justify-center text-white shadow-[0_0_18px_rgba(99,102,241,0.4)] border-2 transition-all relative overflow-visible ${
+                  hasCrown ? 'border-amber-400 shadow-[0_0_22px_rgba(245,158,11,0.6)]' : 'border-indigo-500/70 group-hover:border-cyan-400'
+                }`}>
+                  
+                  {/* Subtle Inner Glow */}
+                  <div className="absolute inset-0.5 rounded-[13px] bg-gradient-to-tr from-indigo-600/30 via-cyan-500/15 to-transparent"></div>
+
+                  {/* Clean Monogram "C" (No green blinking lights) */}
+                  <div className="relative font-mono font-black text-base sm:text-lg tracking-tighter text-white drop-shadow-[0_0_12px_#38bdf8] flex items-center justify-center">
+                    <span className="bg-gradient-to-br from-white via-cyan-100 to-indigo-300 bg-clip-text text-transparent">C</span>
+                  </div>
+
+                  {/* Running Cyber Legs during battle */}
+                  {battlePhase === 'war' && (
+                    <div className="absolute -bottom-3 inset-x-0 flex justify-around pointer-events-none z-10">
+                      <div className="w-1.5 h-3.5 bg-cyan-300 rounded-full animate-leg-l shadow-[0_0_8px_#38bdf8]"></div>
+                      <div className="w-1.5 h-3.5 bg-indigo-400 rounded-full animate-leg-r shadow-[0_0_8px_#6366f1]"></div>
                     </div>
                   )}
                 </div>
               </div>
 
-              <div className="flex flex-col">
+              {/* ⚔️ Defeated Competitors (Go & Node) thrown during the war */}
+              {battlePhase === 'war' && (
+                <div className="absolute left-10 top-0 pointer-events-none z-10">
+                  <div className="absolute -top-1 left-4 px-2 py-0.5 rounded-lg bg-cyan-950 border border-cyan-400 text-cyan-300 font-mono text-[9px] font-black animate-throw-go shadow-[0_0_12px_#06b6d4]">
+                    GO ⚡
+                  </div>
+                  <div className="absolute top-3 left-8 px-2 py-0.5 rounded-lg bg-emerald-950 border border-emerald-500 text-emerald-300 font-mono text-[9px] font-black animate-throw-node shadow-[0_0_12px_#10b981]">
+                    NODE 💥
+                  </div>
+                </div>
+              )}
+
+              <div className="flex flex-col ml-1">
                 <span className="text-xs sm:text-base font-black tracking-tight text-white group-hover:text-indigo-300 transition-colors">
                   CHRISTO VARGHESE
                 </span>
@@ -393,6 +575,14 @@ export default function App() {
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-8 py-6 sm:py-10 lg:py-12 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center relative z-10">
         
+        {/* Background Rotating Telemetry Radar Tower Disc */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[340px] sm:w-[600px] h-[340px] sm:h-[600px] pointer-events-none opacity-15 overflow-hidden flex items-center justify-center z-0">
+          <div className="absolute w-[280px] sm:w-[500px] h-[280px] sm:h-[500px] rounded-full border border-dashed border-cyan-400/40 animate-spin-slow"></div>
+          <div className="absolute w-[200px] sm:w-[360px] h-[200px] sm:h-[360px] rounded-full border border-indigo-500/50 animate-spin-reverse"></div>
+          <div className="absolute w-[120px] sm:w-[220px] h-[120px] sm:h-[220px] rounded-full border-2 border-dashed border-cyan-300/30 animate-pulse-ring"></div>
+          <div className="absolute w-full h-0.5 bg-gradient-to-r from-transparent via-cyan-400 to-transparent animate-radar-sweep"></div>
+        </div>
+
         {/* Photo Container: Mobile First */}
         <div className="order-first lg:order-last lg:col-span-5 flex justify-center w-full relative pt-2 sm:pt-0">
           
@@ -459,27 +649,30 @@ export default function App() {
 
         </div>
 
-        {/* Content Column */}
-        <div className="order-last lg:order-first lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left">
+        {/* Content Column: 'Engineering End-to-End Scalable' Strictly on ONE Single Line on Mobile */}
+        <div className="order-last lg:order-first lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left w-full">
           
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-indigo-500/10 via-blue-500/10 to-violet-500/10 border border-indigo-500/30 text-indigo-300 text-[11px] font-semibold mb-3 shadow-sm backdrop-blur-md">
-            <Radio className="w-3.5 h-3.5 text-indigo-400 animate-pulse" />
-            <span>Full-Stack Software Engineer &amp; Distributed Architect</span>
+          <div className="inline-flex items-center justify-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-indigo-500/10 via-blue-500/10 to-violet-500/10 border border-indigo-500/30 text-indigo-300 text-[10px] sm:text-[11px] font-semibold mb-3 shadow-sm backdrop-blur-md max-w-full">
+            <Radio className="w-3.5 h-3.5 text-indigo-400 animate-pulse shrink-0" />
+            <span className="truncate">Full-Stack Software Engineer &amp; Distributed Architect</span>
           </div>
 
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight mb-3 leading-tight text-white">
-            Engineering <br className="hidden sm:inline" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-blue-400 to-violet-400">
-              End-to-End Scalable
-            </span> <br />
-            Systems &amp; Interfaces.
+          {/* Heading with guaranteed single line on phones */}
+          <h1 className="font-black tracking-tight mb-4 leading-snug sm:leading-tight text-white w-full">
+            <span className="block text-[17px] xs:text-[20px] sm:text-4xl lg:text-5xl whitespace-nowrap overflow-hidden text-ellipsis">
+              Engineering{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-blue-400 to-violet-400">
+                End-to-End Scalable
+              </span>
+            </span>
+            <span className="block text-2xl sm:text-4xl lg:text-5xl mt-1 sm:mt-1.5">Systems &amp; Interfaces.</span>
           </h1>
 
-          <p className="text-slate-300 text-xs sm:text-sm leading-relaxed max-w-xl font-light mb-5">
+          <p className="text-slate-300 text-xs sm:text-sm leading-relaxed max-w-xl font-light mb-5 px-1 sm:px-0">
             Specializing in end-to-end software engineering: from designing high-concurrency microservices and real-time streaming backends in <strong className="text-white font-semibold">Golang (Gin)</strong>, <strong className="text-white font-semibold">Node.js</strong>, and <strong className="text-white font-semibold">WebSockets / WebRTC</strong> to building dynamic, reactive user interfaces in <strong className="text-white font-semibold">React</strong> and <strong className="text-white font-semibold">Tailwind CSS</strong>.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 w-full sm:w-auto">
+          <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-2.5 w-full sm:w-auto">
             <a 
               href="#projects" 
               className="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-gradient-to-r from-indigo-600 via-blue-600 to-violet-600 text-white font-bold hover:brightness-110 active:scale-95 transition-all flex items-center justify-center gap-1.5 text-xs uppercase tracking-wider shadow-md shadow-indigo-600/30 transform hover:-translate-y-0.5"
@@ -495,7 +688,7 @@ export default function App() {
             </a>
           </div>
 
-          <div className="grid grid-cols-3 gap-3 sm:gap-5 pt-4 mt-5 border-t border-slate-800/80 w-full max-w-md">
+          <div className="grid grid-cols-3 gap-3 sm:gap-5 pt-4 mt-5 border-t border-slate-800/80 w-full max-w-md mx-auto lg:mx-0">
             <div className="text-center lg:text-left">
               <p className="text-lg sm:text-xl font-extrabold text-white">8.58</p>
               <p className="text-[10px] text-slate-400 mt-0.5 font-mono">MCA CGPA</p>
@@ -595,13 +788,29 @@ export default function App() {
             </div>
           </div>
 
-          <div className="lg:col-span-6 bg-gradient-to-br from-slate-900/60 to-[#02050e] border border-slate-800/90 rounded-2xl p-4 sm:p-5 backdrop-blur-2xl shadow-xl relative hover:border-indigo-500/40 transition-all">
-            <h3 className="text-sm sm:text-base font-bold text-white mb-3 flex items-center gap-2">
+          {/* Full Stack Engineering Tenets with Cybernetic Signal Tower Background */}
+          <div className="lg:col-span-6 bg-gradient-to-br from-slate-900/70 to-[#02050e] border border-slate-800/90 rounded-2xl p-4 sm:p-5 backdrop-blur-2xl shadow-xl relative hover:border-indigo-500/40 transition-all overflow-hidden">
+            
+            {/* Cyber Antenna / Communication Tower Background with Active Beacon Rings */}
+            <div className="absolute top-2 right-2 sm:right-6 w-36 sm:w-48 h-56 sm:h-64 pointer-events-none opacity-20 flex flex-col items-center justify-start z-0">
+              <div className="relative mt-2 flex items-center justify-center">
+                <div className="w-3.5 h-3.5 rounded-full bg-cyan-400 animate-tower-pulse shadow-[0_0_12px_#38bdf8]"></div>
+                <div className="absolute w-8 h-8 rounded-full border border-cyan-400 animate-signal-ring"></div>
+                <div className="absolute w-14 h-14 rounded-full border border-indigo-500 animate-signal-ring" style={{ animationDelay: '0.8s' }}></div>
+              </div>
+              <div className="w-1 h-14 bg-gradient-to-b from-cyan-400 to-indigo-500"></div>
+              <div className="w-16 h-0.5 bg-indigo-400"></div>
+              <div className="w-20 h-10 border-x-2 border-t-2 border-indigo-500/80 -mt-0.5"></div>
+              <div className="w-28 h-16 border-x-2 border-t-2 border-indigo-600/70 -mt-0.5"></div>
+              <div className="w-36 h-20 border-x-2 border-t-2 border-slate-700/60 -mt-0.5"></div>
+            </div>
+
+            <h3 className="text-sm sm:text-base font-bold text-white mb-3 flex items-center gap-2 relative z-10">
               <ShieldCheck className="w-4 h-4 text-indigo-400" /> Full-Stack Engineering Tenets
             </h3>
 
             <div className="space-y-2.5 relative z-10">
-              <div className="p-2.5 rounded-xl bg-slate-950/70 border border-slate-800/80 flex items-start gap-2.5 hover:border-indigo-500/40 transition-all">
+              <div className="p-2.5 rounded-xl bg-slate-950/75 border border-slate-800/80 flex items-start gap-2.5 hover:border-indigo-500/40 transition-all">
                 <div className="h-7 w-7 rounded-lg bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400 shrink-0">
                   <Server className="w-3.5 h-3.5" />
                 </div>
@@ -611,7 +820,7 @@ export default function App() {
                 </div>
               </div>
 
-              <div className="p-2.5 rounded-xl bg-slate-950/70 border border-slate-800/80 flex items-start gap-2.5 hover:border-blue-500/40 transition-all">
+              <div className="p-2.5 rounded-xl bg-slate-950/75 border border-slate-800/80 flex items-start gap-2.5 hover:border-blue-500/40 transition-all">
                 <div className="h-7 w-7 rounded-lg bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 shrink-0">
                   <Wifi className="w-3.5 h-3.5" />
                 </div>
@@ -621,7 +830,7 @@ export default function App() {
                 </div>
               </div>
 
-              <div className="p-2.5 rounded-xl bg-slate-950/70 border border-slate-800/80 flex items-start gap-2.5 hover:border-violet-500/40 transition-all">
+              <div className="p-2.5 rounded-xl bg-slate-950/75 border border-slate-800/80 flex items-start gap-2.5 hover:border-violet-500/40 transition-all">
                 <div className="h-7 w-7 rounded-lg bg-violet-500/10 border border-violet-500/30 flex items-center justify-center text-violet-400 shrink-0">
                   <Layers className="w-3.5 h-3.5" />
                 </div>
@@ -636,11 +845,20 @@ export default function App() {
         </div>
       </section>
 
-      {/* Technical Stack & Skills Section: Fully Centered Items & Balanced Geometry */}
-      <section id="skills" className="max-w-7xl mx-auto px-4 sm:px-8 py-10 sm:py-14 border-t border-slate-800/80">
-        <div className="text-center max-w-2xl mx-auto mb-6">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 text-xs font-semibold mb-2">
-            <CpuIcon className="w-3.5 h-3.5 text-indigo-400" /> TECHNICAL EXPERTISE
+      {/* Technical Stack & Skills Section: Integrated with Live Working Hardware & Matrix Background Objects */}
+      <section id="skills" className="max-w-7xl mx-auto px-4 sm:px-8 py-10 sm:py-14 border-t border-slate-800/80 relative overflow-hidden">
+        
+        {/* Dynamic Running Circuit & Data Stream Background Lines */}
+        <div className="absolute inset-0 pointer-events-none opacity-20">
+          <div className="absolute top-8 left-1/4 w-px h-64 bg-gradient-to-b from-transparent via-cyan-400 to-transparent animate-circuit-y"></div>
+          <div className="absolute top-16 right-1/3 w-px h-80 bg-gradient-to-b from-transparent via-indigo-400 to-transparent animate-circuit-y" style={{ animationDelay: '1.2s' }}></div>
+          <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500 to-transparent animate-circuit-x"></div>
+          <div className="absolute -top-12 left-1/2 -translate-x-1/2 w-[340px] sm:w-[560px] h-[340px] sm:h-[560px] rounded-full border border-indigo-500/10 animate-spin-slow"></div>
+        </div>
+
+        <div className="text-center max-w-2xl mx-auto mb-6 relative z-10">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 text-xs font-semibold mb-2 shadow-sm">
+            <CpuIcon className="w-3.5 h-3.5 text-indigo-400 animate-spin-slow" /> TECHNICAL EXPERTISE
           </div>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">Core Competencies &amp; Stack</h2>
           <p className="text-slate-400 text-xs sm:text-sm mt-1">
@@ -648,9 +866,12 @@ export default function App() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 relative z-10">
           
-          <div className="bg-slate-900/40 border border-slate-800/90 rounded-2xl p-4 hover:border-indigo-500/60 hover:-translate-y-1 transition-all group shadow-xl flex flex-col items-center text-center">
+          {/* Card 1: Full-Stack Engineering (With Live Running Syntax Engine) */}
+          <div className="bg-slate-900/60 border border-slate-800/90 rounded-2xl p-4 hover:border-indigo-500/60 hover:-translate-y-1 transition-all group shadow-xl flex flex-col items-center text-center relative overflow-hidden">
+            <div className="absolute top-0 right-0 left-0 h-0.5 bg-gradient-to-r from-transparent via-indigo-400 to-transparent animate-laser-h"></div>
+
             <div className="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400 mb-2 group-hover:scale-110 group-hover:rotate-6 transition-transform">
               <Code2 className="w-5 h-5" />
             </div>
@@ -664,7 +885,10 @@ export default function App() {
             </ul>
           </div>
 
-          <div className="bg-slate-900/40 border border-slate-800/90 rounded-2xl p-4 hover:border-blue-500/60 hover:-translate-y-1 transition-all group shadow-xl flex flex-col items-center text-center">
+          {/* Card 2: Real-Time & Streaming (With Pulse Oscilloscope Waves) */}
+          <div className="bg-slate-900/60 border border-slate-800/90 rounded-2xl p-4 hover:border-blue-500/60 hover:-translate-y-1 transition-all group shadow-xl flex flex-col items-center text-center relative overflow-hidden">
+            <div className="absolute -bottom-6 -right-6 w-20 h-20 rounded-full border border-cyan-400/20 animate-signal-ring pointer-events-none"></div>
+
             <div className="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 mb-2 group-hover:scale-110 transition-transform">
               <Radio className="w-5 h-5 animate-pulse" />
             </div>
@@ -678,7 +902,10 @@ export default function App() {
             </ul>
           </div>
 
-          <div className="bg-slate-900/40 border border-slate-800/90 rounded-2xl p-4 hover:border-emerald-500/60 hover:-translate-y-1 transition-all group shadow-xl flex flex-col items-center text-center">
+          {/* Card 3: Databases & Pub/Sub (With Memory Query Sweeps) */}
+          <div className="bg-slate-900/60 border border-slate-800/90 rounded-2xl p-4 hover:border-emerald-500/60 hover:-translate-y-1 transition-all group shadow-xl flex flex-col items-center text-center relative overflow-hidden">
+            <div className="absolute -left-12 top-0 bottom-0 w-8 bg-gradient-to-r from-transparent via-emerald-400/20 to-transparent animate-circuit-x pointer-events-none"></div>
+
             <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-2 group-hover:scale-110 transition-transform">
               <Database className="w-5 h-5" />
             </div>
@@ -692,7 +919,10 @@ export default function App() {
             </ul>
           </div>
 
-          <div className="bg-slate-900/40 border border-slate-800/90 rounded-2xl p-4 hover:border-violet-500/60 hover:-translate-y-1 transition-all group shadow-xl flex flex-col items-center text-center">
+          {/* Card 4: Cloud & DevOps (With Active Container Pod Ring) */}
+          <div className="bg-slate-900/60 border border-slate-800/90 rounded-2xl p-4 hover:border-violet-500/60 hover:-translate-y-1 transition-all group shadow-xl flex flex-col items-center text-center relative overflow-hidden">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-28 h-28 rounded-full border border-dashed border-violet-500/20 animate-spin-slow pointer-events-none"></div>
+
             <div className="w-10 h-10 rounded-xl bg-violet-500/10 border border-violet-500/30 flex items-center justify-center text-violet-400 mb-2 group-hover:scale-110 transition-transform">
               <CpuIcon className="w-5 h-5" />
             </div>
