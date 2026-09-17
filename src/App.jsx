@@ -5,7 +5,7 @@ import {
   Menu, X, Check, Server, Layers, Database, CpuIcon, 
   GraduationCap, Radio, Network, Wifi, Lock, GitBranch,
   ArrowUpRight, Award, Video, ShieldCheck, Zap, Code2, Globe, Terminal, Activity,
-  FastForward, BookOpen, RefreshCw, Compass, Crown, Flame
+  FastForward, BookOpen, RefreshCw, Compass, Crown, Flame, Anchor
 } from 'lucide-react';
 
 export default function App() {
@@ -204,7 +204,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#02050e] text-slate-100 font-sans selection:bg-indigo-600/40 selection:text-white relative overflow-x-hidden antialiased pt-20">
       
-      {/* Precision Kinetic CSS Animations & Left-Mounted Fiery Broadsword Mechanics */}
+      {/* Precision Kinetic CSS Animations, Living Matrix & Pirate Galleon Mechanics */}
       <style>{`
         @keyframes floatSlow {
           0%, 100% { transform: translateY(0px) rotate(0deg); }
@@ -289,15 +289,80 @@ export default function App() {
           50% { transform: rotateY(-170deg); }
         }
 
-        /* ⚔️ AUTHENTIC LEFT-SIDE FLAMING SWORD STANCE (Pointing Away from Name) */
-        @keyframes idleSwordLeft {
-          0%, 100% { transform: rotate(-28deg) translateY(0); filter: drop-shadow(-3px -3px 8px rgba(249,115,22,0.85)); }
-          50% { transform: rotate(-38deg) translateY(-2px); filter: drop-shadow(-4px -4px 14px rgba(239,68,68,1)); }
+        /* 💥 ULTRA-ATTRACTIVE LOGO LIFECYCLE: BLINK -> HOP/JUMP -> TILT/ROTATION WIGGLE */
+        @keyframes logoAttentionChoreography {
+          0%, 15% {
+            transform: translateY(0) rotate(0deg) scale(1);
+            border-color: #38bdf8;
+            box-shadow: 0 0 14px rgba(56, 189, 248, 0.9), inset 0 0 10px rgba(56, 189, 248, 0.5);
+          }
+          18% {
+            transform: translateY(-8px) rotate(-8deg) scale(1.18);
+            border-color: #ef4444;
+            box-shadow: 0 0 24px rgba(239, 68, 68, 1), inset 0 0 14px rgba(239, 68, 68, 0.6);
+          }
+          22% {
+            transform: translateY(0px) rotate(8deg) scale(1.08);
+            border-color: #6366f1;
+            box-shadow: 0 0 20px rgba(99, 102, 241, 1), inset 0 0 12px rgba(99, 102, 241, 0.6);
+          }
+          26% {
+            transform: translateY(-6px) rotate(-4deg) scale(1.14);
+            border-color: #10b981;
+            box-shadow: 0 0 22px rgba(16, 185, 129, 1), inset 0 0 12px rgba(16, 185, 129, 0.6);
+          }
+          30% {
+            transform: translateY(0px) rotate(0deg) scale(1);
+            border-color: #38bdf8;
+            box-shadow: 0 0 14px rgba(56, 189, 248, 0.9);
+          }
+          45%, 60% {
+            transform: rotate(0deg);
+            border-color: #ec4899;
+            box-shadow: 0 0 22px rgba(236, 72, 153, 0.9), inset 0 0 14px rgba(236, 72, 153, 0.4);
+          }
+          65% {
+            transform: rotate(360deg) scale(1.12);
+            border-color: #f59e0b;
+            box-shadow: 0 0 24px rgba(245, 158, 11, 1), inset 0 0 14px rgba(245, 158, 11, 0.6);
+          }
+          70% {
+            transform: rotate(360deg) scale(1);
+            border-color: #38bdf8;
+            box-shadow: 0 0 16px rgba(56, 189, 248, 0.9);
+          }
+          85%, 100% {
+            transform: rotate(360deg) scale(1);
+            border-color: #6366f1;
+            box-shadow: 0 0 16px rgba(99, 102, 241, 0.9), inset 0 0 10px rgba(99, 102, 241, 0.5);
+          }
         }
-        @keyframes flameFlickerLeft {
-          0%, 100% { opacity: 0.85; transform: scaleY(1) scaleX(1); }
-          50% { opacity: 1; transform: scaleY(1.4) scaleX(1.2) rotate(-6deg); }
+
+        /* 🗄️ LIVING BACKGROUND ENGINE ANIMATIONS FOR SKILL CARDS */
+        @keyframes dbStackPulse {
+          0%, 100% { opacity: 0.18; transform: scaleY(0.96); }
+          50% { opacity: 0.55; transform: scaleY(1.04); }
         }
+        @keyframes dbLaserScan {
+          0% { transform: translateY(-100%); opacity: 0; }
+          40% { opacity: 0.9; }
+          100% { transform: translateY(220%); opacity: 0; }
+        }
+        @keyframes streamingWaveFlow {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        @keyframes devopsGearRotate {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+        @keyframes codeRainStream {
+          0% { transform: translateY(-100%); opacity: 0; }
+          30% { opacity: 0.6; }
+          100% { transform: translateY(180%); opacity: 0; }
+        }
+
+        /* War Slash Animation Only Triggered On Click */
         @keyframes swordSlashAttackLeft {
           0% { transform: rotate(-25deg) scale(1); }
           30% { transform: rotate(-90deg) scale(1.3); }
@@ -342,6 +407,46 @@ export default function App() {
           50% { transform: rotate(35deg); }
         }
 
+        /* 🏴‍☠️ Authentic Black Pearl Pirate Ship Animation */
+        @keyframes pirateShipSailToCenter {
+          0% {
+            transform: translateX(-120%) translateY(0px) rotate(-2deg);
+            opacity: 0;
+          }
+          15% {
+            opacity: 1;
+            transform: translateX(-60%) translateY(-3px) rotate(2deg);
+          }
+          35% {
+            transform: translateX(0%) translateY(2px) rotate(-1deg);
+          }
+          50% {
+            transform: translateX(0%) translateY(-2px) rotate(1deg);
+          }
+          85% {
+            transform: translateX(0%) translateY(0px) rotate(0deg);
+            opacity: 1;
+          }
+          100% {
+            transform: translateX(0%) translateY(0px) rotate(0deg);
+            opacity: 1;
+          }
+        }
+        @keyframes pirateFlagHoistAndFly {
+          0%, 35% {
+            transform: scale(0) translateY(12px);
+            opacity: 0;
+          }
+          45% {
+            transform: scale(1.15) translateY(-2px);
+            opacity: 1;
+          }
+          55%, 100% {
+            transform: scale(1) translateY(0px);
+            opacity: 1;
+          }
+        }
+
         .animate-float-slow { animation: floatSlow 5s ease-in-out infinite; }
         .animate-float-reverse { animation: floatReverse 6s ease-in-out infinite; }
         .animate-extreme-cap { animation: extremeCapToss 2.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
@@ -362,10 +467,8 @@ export default function App() {
         .animate-globe-spin { animation: globeSpinY 16s linear infinite; transform-style: preserve-3d; }
         .animate-globe-fast { animation: globeSpinYFast 3s cubic-bezier(0.1, 0.9, 0.2, 1) forwards; transform-style: preserve-3d; }
         
-        /* Left-Sided Real Blade Animations */
-        .animate-sword-left-idle { animation: idleSwordLeft 2.5s ease-in-out infinite; transform-origin: 50% 90%; }
+        .animate-logo-playful { animation: logoAttentionChoreography 6s ease-in-out infinite; }
         .animate-sword-left-slash { animation: swordSlashAttackLeft 0.35s ease-in-out infinite; transform-origin: 50% 90%; }
-        .animate-flame-left { animation: flameFlickerLeft 0.22s infinite alternate ease-in-out; }
         .animate-sprint-war { animation: sprintToWar 2.2s cubic-bezier(0.2, 0.9, 0.3, 1) forwards; }
         .animate-throw-go { animation: defeatGo 1.8s cubic-bezier(0.1, 0.8, 0.2, 1) forwards; }
         .animate-throw-node { animation: defeatNode 1.8s cubic-bezier(0.1, 0.8, 0.2, 1) 0.3s forwards; }
@@ -373,6 +476,25 @@ export default function App() {
         .animate-crown-head { animation: crownDescend 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
         .animate-leg-l { animation: legRunLeft 0.14s infinite alternate ease-in-out; transform-origin: top center; }
         .animate-leg-r { animation: legRunRight 0.14s infinite alternate ease-in-out; transform-origin: top center; }
+
+        .animate-db-pulse { animation: dbStackPulse 2.8s ease-in-out infinite; }
+        .animate-db-scan { animation: dbLaserScan 2.4s ease-in-out infinite; }
+        .animate-streaming-wave { animation: streamingWaveFlow 6s linear infinite; }
+        .animate-devops-gear { animation: devopsGearRotate 12s linear infinite; }
+        .animate-coderain-1 { animation: codeRainStream 3.2s linear infinite; }
+        .animate-coderain-2 { animation: codeRainStream 2.6s linear infinite 1.2s; }
+
+        /* Pirate Ship Reveal on Card Hover & Active Mobile Touch */
+        .group:hover .pirate-ship-voyage,
+        .group:focus-within .pirate-ship-voyage,
+        .group:active .pirate-ship-voyage {
+          animation: pirateShipSailToCenter 1.6s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+        }
+        .group:hover .pirate-flag-hoist,
+        .group:focus-within .pirate-flag-hoist,
+        .group:active .pirate-flag-hoist {
+          animation: pirateFlagHoistAndFly 1.8s ease-out forwards;
+        }
       `}</style>
 
       {/* Atmospheric Background Ambient Radiance */}
@@ -414,49 +536,48 @@ export default function App() {
         <header className="w-full backdrop-blur-2xl bg-[#02050e]/95 border-b border-slate-800/80 shadow-2xl relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-8 h-14 sm:h-16 flex items-center justify-between relative">
             
-            {/* ⚔️ C LOGO WITH LEFT-MOUNTED REALISTIC FLAMING SWORD (Clear of Name text, No Overlapping) */}
+            {/* C LOGO: NATURAL PLAYFUL BEHAVIOR (HOPPING, BLINKING, ROTATING) WITHOUT FORCED LABELS */}
             <div 
               onClick={triggerEpicBattle}
-              title="Touch me! 'C' with its Flaming Sword will charge, defeat Go & Node, and crown itself King!"
-              className="flex items-center gap-3.5 group cursor-pointer select-none relative pl-2.5"
+              title="Click or Touch me to initiate battle!"
+              className="flex items-center gap-3.5 group cursor-pointer select-none relative pl-2"
             >
-              <div className={`relative z-20 ${battlePhase === 'war' ? 'animate-sprint-war' : 'hover:scale-110 active:scale-95 transition-transform'}`}>
+              <div className={`relative z-20 ${battlePhase === 'war' ? 'animate-sprint-war' : ''}`}>
                 
-                {/* 🗡️ AUTHENTIC REALISTIC BROADSWORD (Mounted on Left, Slanted Away from Text) */}
-                <div 
-                  className={`absolute -top-7 -left-5 z-30 pointer-events-none flex flex-col items-center select-none ${
-                    battlePhase === 'war' ? 'animate-sword-left-slash' : 'animate-sword-left-idle'
-                  }`}
-                  style={{ width: '28px', height: '54px' }}
-                >
-                  {/* Blazing Flame Sheath enveloping the Blade */}
-                  <div className="absolute -top-2 inset-x-0 flex justify-center pointer-events-none">
-                    <Flame className="w-5 h-6 text-amber-300 fill-orange-500 animate-flame-left filter drop-shadow-[0_0_12px_#ea580c]" />
-                  </div>
+                {/* 🗡️ AUTHENTIC REALISTIC BROADSWORD: ONLY SPAWNED WHEN WAR PHASE IS ACTIVE */}
+                {battlePhase === 'war' && (
+                  <div 
+                    className="absolute -top-7 -left-5 z-30 pointer-events-none flex flex-col items-center select-none animate-sword-left-slash"
+                    style={{ width: '28px', height: '54px' }}
+                  >
+                    {/* Blazing Flame Sheath enveloping the Blade */}
+                    <div className="absolute -top-2 inset-x-0 flex justify-center pointer-events-none">
+                      <Flame className="w-5 h-6 text-amber-300 fill-orange-500 filter drop-shadow-[0_0_12px_#ea580c]" />
+                    </div>
 
-                  {/* High-Grade Double-Edged Blade Tip & Spine */}
-                  <div className="relative w-2 h-7 bg-gradient-to-b from-white via-slate-100 to-slate-300 shadow-[0_0_10px_#f97316] rounded-t-full flex justify-center">
-                    {/* Fuller / Blood Groove */}
-                    <div className="w-0.5 h-5 bg-slate-500/80 rounded-full mt-1"></div>
-                  </div>
+                    {/* High-Grade Double-Edged Blade Tip & Spine */}
+                    <div className="relative w-2 h-7 bg-gradient-to-b from-white via-slate-100 to-slate-300 shadow-[0_0_10px_#f97316] rounded-t-full flex justify-center">
+                      <div className="w-0.5 h-5 bg-slate-500/80 rounded-full mt-1"></div>
+                    </div>
 
-                  {/* Golden-Winged Crossguard */}
-                  <div className="w-6 h-1 bg-gradient-to-r from-amber-500 via-amber-200 to-amber-500 rounded-sm shadow-[0_0_4px_#f59e0b] -mt-0.5 z-10 flex justify-between px-0.5">
-                    <div className="w-0.5 h-1.5 bg-amber-600 rounded-full -mt-0.5"></div>
-                    <div className="w-0.5 h-1.5 bg-amber-600 rounded-full -mt-0.5"></div>
-                  </div>
+                    {/* Golden-Winged Crossguard */}
+                    <div className="w-6 h-1 bg-gradient-to-r from-amber-500 via-amber-200 to-amber-500 rounded-sm shadow-[0_0_4px_#f59e0b] -mt-0.5 z-10 flex justify-between px-0.5">
+                      <div className="w-0.5 h-1.5 bg-amber-600 rounded-full -mt-0.5"></div>
+                      <div className="w-0.5 h-1.5 bg-amber-600 rounded-full -mt-0.5"></div>
+                    </div>
 
-                  {/* Leather Wrapped Grip / Hilt */}
-                  <div className="w-1.5 h-3 bg-gradient-to-b from-amber-950 via-amber-900 to-amber-950 rounded-sm flex flex-col justify-around py-0.5">
-                    <div className="w-full h-px bg-amber-600/50"></div>
-                    <div className="w-full h-px bg-amber-600/50"></div>
-                  </div>
+                    {/* Leather Wrapped Grip / Hilt */}
+                    <div className="w-1.5 h-3 bg-gradient-to-b from-amber-950 via-amber-900 to-amber-950 rounded-sm flex flex-col justify-around py-0.5">
+                      <div className="w-full h-px bg-amber-600/50"></div>
+                      <div className="w-full h-px bg-amber-600/50"></div>
+                    </div>
 
-                  {/* Weighted Steel Pommel with Gem */}
-                  <div className="w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-amber-400 to-amber-200 border border-amber-600 shadow-[0_0_6px_#f59e0b] -mt-0.5 flex items-center justify-center">
-                    <div className="w-1 h-1 rounded-full bg-rose-600"></div>
+                    {/* Weighted Steel Pommel with Gem */}
+                    <div className="w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-amber-400 to-amber-200 border border-amber-600 shadow-[0_0_6px_#f59e0b] -mt-0.5 flex items-center justify-center">
+                      <div className="w-1 h-1 rounded-full bg-rose-600"></div>
+                    </div>
                   </div>
-                </div>
+                )}
 
                 {/* 👑 Golden Royal Crown with Diamond & Ruby Red Gems */}
                 {battlePhase === 'triumph' && (
@@ -481,16 +602,20 @@ export default function App() {
                   </div>
                 )}
 
-                {/* Outer Cyber Throne Armor for C */}
-                <div className={`h-9 w-9 sm:h-10 sm:w-10 rounded-2xl bg-gradient-to-tr from-[#050b1a] via-[#101b38] to-[#02050e] flex items-center justify-center text-white shadow-[0_0_18px_rgba(99,102,241,0.4)] border-2 transition-all relative overflow-visible ${
-                  hasCrown ? 'border-amber-400 shadow-[0_0_22px_rgba(245,158,11,0.6)]' : 'border-indigo-500/70 group-hover:border-cyan-400'
+                {/* Outer Cyber Armor for C with Automatic Blinking, Jumping & Rotating Attractor Cycle */}
+                <div className={`h-10 w-10 sm:h-11 sm:w-11 rounded-2xl bg-gradient-to-tr from-[#050b1a] via-[#101b38] to-[#02050e] flex items-center justify-center text-white border-2 transition-all relative overflow-visible ${
+                  hasCrown 
+                    ? 'border-amber-400 shadow-[0_0_22px_rgba(245,158,11,0.6)]' 
+                    : battlePhase === 'war' 
+                    ? 'border-cyan-400 shadow-[0_0_20px_#38bdf8]' 
+                    : 'animate-logo-playful'
                 }`}>
                   
                   {/* Subtle Inner Glow */}
-                  <div className="absolute inset-0.5 rounded-[13px] bg-gradient-to-tr from-indigo-600/30 via-cyan-500/15 to-transparent"></div>
+                  <div className="absolute inset-0.5 rounded-[13px] bg-gradient-to-tr from-indigo-600/30 via-cyan-500/20 to-red-500/20 pointer-events-none"></div>
 
-                  {/* Clean Monogram "C" (No green blinking lights) */}
-                  <div className="relative font-mono font-black text-base sm:text-lg tracking-tighter text-white drop-shadow-[0_0_12px_#38bdf8] flex items-center justify-center">
+                  {/* Clean Monogram "C" */}
+                  <div className="relative font-mono font-black text-base sm:text-lg tracking-tighter text-white drop-shadow-[0_0_12px_#38bdf8] flex items-center justify-center pointer-events-none">
                     <span className="bg-gradient-to-br from-white via-cyan-100 to-indigo-300 bg-clip-text text-transparent">C</span>
                   </div>
 
@@ -504,7 +629,7 @@ export default function App() {
                 </div>
               </div>
 
-              {/* ⚔️ Defeated Competitors (Go & Node) thrown during the war */}
+              {/* Defeated Competitors (Go & Node) thrown during the war */}
               {battlePhase === 'war' && (
                 <div className="absolute left-10 top-0 pointer-events-none z-10">
                   <div className="absolute -top-1 left-4 px-2 py-0.5 rounded-lg bg-cyan-950 border border-cyan-400 text-cyan-300 font-mono text-[9px] font-black animate-throw-go shadow-[0_0_12px_#06b6d4]">
@@ -573,7 +698,7 @@ export default function App() {
       </div>
 
       {/* Hero Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-8 py-6 sm:py-10 lg:py-12 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center relative z-10">
+      <section className="max-w-7xl mx-auto px-4 sm:px-8 py-8 sm:py-12 lg:py-14 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center relative z-10">
         
         {/* Background Rotating Telemetry Radar Tower Disc */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[340px] sm:w-[600px] h-[340px] sm:h-[600px] pointer-events-none opacity-15 overflow-hidden flex items-center justify-center z-0">
@@ -583,42 +708,43 @@ export default function App() {
           <div className="absolute w-full h-0.5 bg-gradient-to-r from-transparent via-cyan-400 to-transparent animate-radar-sweep"></div>
         </div>
 
-        {/* Photo Container: Mobile First */}
+        {/* Photo Container: Enlarged and Fully Responsive With Orbit Items */}
         <div className="order-first lg:order-last lg:col-span-5 flex justify-center w-full relative pt-2 sm:pt-0">
           
-          <div className="flex absolute -top-3 sm:-top-5 -left-1 sm:-left-6 z-30 animate-float-slow items-center gap-1.5 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-xl bg-[#030816]/95 border border-indigo-500/40 backdrop-blur-xl shadow-xl hover:scale-105 transition-transform cursor-pointer">
-            <Radio className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-indigo-400 animate-pulse shrink-0" />
+          <div className="flex absolute -top-4 sm:-top-5 -left-2 sm:-left-6 z-30 animate-float-slow items-center gap-2 px-3 py-1.5 rounded-xl bg-[#030816]/95 border border-indigo-500/50 backdrop-blur-xl shadow-xl hover:scale-105 transition-transform cursor-pointer">
+            <Radio className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-indigo-400 animate-pulse shrink-0" />
             <div className="text-left">
               <p className="text-[7px] sm:text-[8px] uppercase font-mono font-bold text-slate-400">WebRTC Mesh</p>
-              <p className="text-[9px] sm:text-[11px] font-bold text-white whitespace-nowrap">Sub-second P2P</p>
+              <p className="text-[10px] sm:text-[11px] font-bold text-white whitespace-nowrap">Sub-second P2P</p>
             </div>
           </div>
 
-          <div className="flex absolute -bottom-3 sm:-bottom-5 -right-1 sm:-right-5 z-30 animate-float-reverse items-center gap-1.5 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-xl bg-[#030816]/95 border border-blue-500/40 backdrop-blur-xl shadow-xl hover:scale-105 transition-transform cursor-pointer">
+          <div className="flex absolute -bottom-4 sm:-bottom-5 -right-2 sm:-right-5 z-30 animate-float-reverse items-center gap-2 px-3 py-1.5 rounded-xl bg-[#030816]/95 border border-blue-500/50 backdrop-blur-xl shadow-xl hover:scale-105 transition-transform cursor-pointer">
             <Server className="w-3.5 h-3.5 text-blue-400 shrink-0" />
             <div className="text-left">
               <p className="text-[7px] sm:text-[8px] uppercase font-mono font-bold text-slate-400">Golang Core</p>
-              <p className="text-[9px] sm:text-[11px] font-bold text-white whitespace-nowrap">Goroutines</p>
+              <p className="text-[10px] sm:text-[11px] font-bold text-white whitespace-nowrap">Goroutines</p>
             </div>
           </div>
 
-          <div className="flex absolute top-1/2 -right-2 sm:-right-6 z-30 animate-float-slow items-center gap-1.5 px-2 sm:px-3 py-1 sm:py-1.5 rounded-xl bg-[#030816]/95 border border-violet-500/40 backdrop-blur-xl shadow-xl hover:scale-105 transition-transform cursor-pointer">
+          <div className="flex absolute top-1/2 -right-3 sm:-right-7 z-30 animate-float-slow items-center gap-2 px-3 py-1.5 rounded-xl bg-[#030816]/95 border border-violet-500/50 backdrop-blur-xl shadow-xl hover:scale-105 transition-transform cursor-pointer">
             <Code2 className="w-3.5 h-3.5 text-violet-400 shrink-0" />
             <div className="text-left">
               <p className="text-[7px] sm:text-[8px] uppercase font-mono font-bold text-slate-400">React &amp; Redux</p>
-              <p className="text-[9px] sm:text-[11px] font-bold text-white whitespace-nowrap">Reactive UI</p>
+              <p className="text-[10px] sm:text-[11px] font-bold text-white whitespace-nowrap">Reactive UI</p>
             </div>
           </div>
 
-          <div className="relative group w-full max-w-[260px] sm:max-w-sm md:max-w-md">
-            <div className="absolute -inset-1.5 bg-gradient-to-tr from-indigo-500/40 via-blue-500/30 to-violet-500/40 rounded-[28px] blur-xl opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 pointer-events-none"></div>
+          {/* Enlarged Photo Container */}
+          <div className="relative group w-full max-w-[310px] sm:max-w-[380px] md:max-w-[430px]">
+            <div className="absolute -inset-2 bg-gradient-to-tr from-indigo-500/40 via-blue-500/30 to-violet-500/40 rounded-[32px] blur-xl opacity-75 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 pointer-events-none"></div>
 
-            <div className="absolute -inset-0.5 rounded-[28px] overflow-hidden pointer-events-none z-0">
+            <div className="absolute -inset-0.5 rounded-[30px] overflow-hidden pointer-events-none z-0">
               <div className="w-full h-6 bg-gradient-to-r from-transparent via-indigo-400/50 to-transparent animate-laser-v"></div>
             </div>
 
-            <div className="relative z-10 rounded-[26px] overflow-hidden border border-slate-700/80 bg-gradient-to-b from-slate-900/90 to-[#02050e] shadow-xl p-2 sm:p-2.5 hover:border-indigo-400/70 transition-all duration-300">
-              <div className="relative h-[310px] sm:h-[390px] rounded-[18px] overflow-hidden bg-slate-950">
+            <div className="relative z-10 rounded-[28px] overflow-hidden border border-slate-700/80 bg-gradient-to-b from-slate-900/90 to-[#02050e] shadow-2xl p-2.5 sm:p-3 hover:border-indigo-400/80 transition-all duration-300">
+              <div className="relative h-[370px] sm:h-[450px] md:h-[470px] rounded-[20px] overflow-hidden bg-slate-950">
                 <img 
                   src="/PHOTO-2026-08-09-23-34-02.jpg" 
                   alt="Christo Varghese" 
@@ -627,19 +753,19 @@ export default function App() {
                 
                 <div className="absolute inset-0 bg-gradient-to-t from-[#02050e] via-[#02050e]/20 to-transparent opacity-95 z-20 pointer-events-none"></div>
 
-                <div className="absolute top-2.5 left-2.5 backdrop-blur-xl bg-black/60 border border-white/10 px-2.5 py-0.5 rounded-full flex items-center gap-1.5 shadow-md z-30">
+                <div className="absolute top-3 left-3 backdrop-blur-xl bg-black/60 border border-white/10 px-3 py-1 rounded-full flex items-center gap-1.5 shadow-md z-30">
                   <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-ping"></span>
-                  <span className="text-[9px] font-semibold text-slate-200">Active Engineer</span>
+                  <span className="text-[10px] font-semibold text-slate-200">Active Engineer</span>
                 </div>
 
-                <div className="absolute bottom-2.5 left-2.5 right-2.5 backdrop-blur-xl bg-slate-950/85 border border-slate-800/90 p-2.5 sm:p-3 rounded-xl shadow-lg z-30">
+                <div className="absolute bottom-3 left-3 right-3 backdrop-blur-xl bg-slate-950/85 border border-slate-800/90 p-3 sm:p-3.5 rounded-xl shadow-lg z-30">
                   <div className="flex items-center justify-between">
                     <div>
-                      <p className="text-white font-bold text-xs sm:text-sm">Christo Varghese</p>
-                      <p className="text-indigo-400 text-[10px] sm:text-xs font-semibold">Master of Computer Applications (MCA)</p>
+                      <p className="text-white font-bold text-sm sm:text-base">Christo Varghese</p>
+                      <p className="text-indigo-400 text-[11px] sm:text-xs font-semibold">Master of Computer Applications (MCA)</p>
                     </div>
                     <span className="p-1.5 rounded-lg bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 animate-pulse">
-                      <Sparkles className="w-3.5 h-3.5" />
+                      <Sparkles className="w-4 h-4" />
                     </span>
                   </div>
                 </div>
@@ -649,7 +775,7 @@ export default function App() {
 
         </div>
 
-        {/* Content Column: 'Engineering End-to-End Scalable' Strictly on ONE Single Line on Mobile */}
+        {/* Content Column */}
         <div className="order-last lg:order-first lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left w-full">
           
           <div className="inline-flex items-center justify-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-indigo-500/10 via-blue-500/10 to-violet-500/10 border border-indigo-500/30 text-indigo-300 text-[10px] sm:text-[11px] font-semibold mb-3 shadow-sm backdrop-blur-md max-w-full">
@@ -657,9 +783,8 @@ export default function App() {
             <span className="truncate">Full-Stack Software Engineer &amp; Distributed Architect</span>
           </div>
 
-          {/* Heading with guaranteed single line on phones */}
           <h1 className="font-black tracking-tight mb-4 leading-snug sm:leading-tight text-white w-full">
-            <span className="block text-[17px] xs:text-[20px] sm:text-4xl lg:text-5xl whitespace-nowrap overflow-hidden text-ellipsis">
+            <span className="block text-[19px] xs:text-[22px] sm:text-4xl lg:text-5xl whitespace-nowrap overflow-hidden text-ellipsis">
               Engineering{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-blue-400 to-violet-400">
                 End-to-End Scalable
@@ -845,7 +970,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* Technical Stack & Skills Section: Integrated with Live Working Hardware & Matrix Background Objects */}
+      {/* Technical Stack & Skills Section: Integrated with Dynamic, Visually Clear Working Background Engines */}
       <section id="skills" className="max-w-7xl mx-auto px-4 sm:px-8 py-10 sm:py-14 border-t border-slate-800/80 relative overflow-hidden">
         
         {/* Dynamic Running Circuit & Data Stream Background Lines */}
@@ -868,15 +993,31 @@ export default function App() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 relative z-10">
           
-          {/* Card 1: Full-Stack Engineering (With Live Running Syntax Engine) */}
-          <div className="bg-slate-900/60 border border-slate-800/90 rounded-2xl p-4 hover:border-indigo-500/60 hover:-translate-y-1 transition-all group shadow-xl flex flex-col items-center text-center relative overflow-hidden">
-            <div className="absolute top-0 right-0 left-0 h-0.5 bg-gradient-to-r from-transparent via-indigo-400 to-transparent animate-laser-h"></div>
+          {/* Card 1: Full-Stack Engineering (With Live Active Code Rain & Node Pipeline Background) */}
+          <div className="bg-slate-900/70 border border-slate-800/90 rounded-2xl p-4 hover:border-indigo-500/70 hover:-translate-y-1 transition-all group shadow-xl flex flex-col items-center text-center relative overflow-hidden">
+            
+            {/* Visual Background Engine: Falling Syntax Data Matrix */}
+            <div className="absolute inset-0 pointer-events-none overflow-hidden select-none opacity-20">
+              <div className="absolute left-2 top-0 text-[9px] font-mono text-indigo-400 animate-coderain-1 leading-tight flex flex-col">
+                <span>&lt;div&gt;</span>
+                <span>fn main()</span>
+                <span>async dispatch()</span>
+                <span>return res.json()</span>
+                <span>goroutine.run()</span>
+              </div>
+              <div className="absolute right-2 top-0 text-[9px] font-mono text-cyan-400 animate-coderain-2 leading-tight flex flex-col">
+                <span>const [state, set]</span>
+                <span>import Gin</span>
+                <span>pipeline.build()</span>
+                <span>yield payload</span>
+              </div>
+            </div>
 
-            <div className="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400 mb-2 group-hover:scale-110 group-hover:rotate-6 transition-transform">
+            <div className="w-10 h-10 rounded-xl bg-indigo-500/15 border border-indigo-500/40 flex items-center justify-center text-indigo-400 mb-2 group-hover:scale-110 group-hover:rotate-6 transition-transform relative z-10">
               <Code2 className="w-5 h-5" />
             </div>
-            <h3 className="text-sm font-bold text-white mb-2">Full-Stack Engineering</h3>
-            <ul className="space-y-1.5 text-xs text-slate-300 font-medium flex flex-col items-center w-full">
+            <h3 className="text-sm font-bold text-white mb-2 relative z-10">Full-Stack Engineering</h3>
+            <ul className="space-y-1.5 text-xs text-slate-300 font-medium flex flex-col items-center w-full relative z-10">
               {skills.fullstack.map((item, idx) => (
                 <li key={idx} className="flex items-center justify-center gap-1.5 text-center">
                   <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 shrink-0"></span> <span>{item}</span>
@@ -885,15 +1026,24 @@ export default function App() {
             </ul>
           </div>
 
-          {/* Card 2: Real-Time & Streaming (With Pulse Oscilloscope Waves) */}
-          <div className="bg-slate-900/60 border border-slate-800/90 rounded-2xl p-4 hover:border-blue-500/60 hover:-translate-y-1 transition-all group shadow-xl flex flex-col items-center text-center relative overflow-hidden">
-            <div className="absolute -bottom-6 -right-6 w-20 h-20 rounded-full border border-cyan-400/20 animate-signal-ring pointer-events-none"></div>
+          {/* Card 2: Real-Time & Streaming (With Dual-Oscilloscope Signal Wave Background) */}
+          <div className="bg-slate-900/70 border border-slate-800/90 rounded-2xl p-4 hover:border-blue-500/70 hover:-translate-y-1 transition-all group shadow-xl flex flex-col items-center text-center relative overflow-hidden">
+            
+            {/* Visual Background Engine: High-Frequency Wave Stream */}
+            <div className="absolute inset-0 pointer-events-none flex items-center overflow-hidden opacity-25">
+              <div className="w-[200%] flex animate-streaming-wave">
+                <svg className="w-full h-16 text-cyan-400" viewBox="0 0 400 60" fill="none">
+                  <path d="M0 30 Q 25 5 50 30 T 100 30 T 150 30 T 200 30 T 250 30 T 300 30 T 350 30 T 400 30" stroke="currentColor" strokeWidth="2.5" />
+                  <path d="M0 30 Q 25 55 50 30 T 100 30 T 150 30 T 200 30 T 250 30 T 300 30 T 350 30 T 400 30" stroke="#38bdf8" strokeWidth="1.5" strokeDasharray="3 3" />
+                </svg>
+              </div>
+            </div>
 
-            <div className="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 mb-2 group-hover:scale-110 transition-transform">
+            <div className="w-10 h-10 rounded-xl bg-blue-500/15 border border-blue-500/40 flex items-center justify-center text-blue-400 mb-2 group-hover:scale-110 transition-transform relative z-10">
               <Radio className="w-5 h-5 animate-pulse" />
             </div>
-            <h3 className="text-sm font-bold text-white mb-2">Real-Time &amp; Streaming</h3>
-            <ul className="space-y-1.5 text-xs text-slate-300 font-medium flex flex-col items-center w-full">
+            <h3 className="text-sm font-bold text-white mb-2 relative z-10">Real-Time &amp; Streaming</h3>
+            <ul className="space-y-1.5 text-xs text-slate-300 font-medium flex flex-col items-center w-full relative z-10">
               {skills.streaming.map((item, idx) => (
                 <li key={idx} className="flex items-center justify-center gap-1.5 text-center">
                   <span className="w-1.5 h-1.5 rounded-full bg-blue-400 shrink-0"></span> <span>{item}</span>
@@ -902,15 +1052,40 @@ export default function App() {
             </ul>
           </div>
 
-          {/* Card 3: Databases & Pub/Sub (With Memory Query Sweeps) */}
-          <div className="bg-slate-900/60 border border-slate-800/90 rounded-2xl p-4 hover:border-emerald-500/60 hover:-translate-y-1 transition-all group shadow-xl flex flex-col items-center text-center relative overflow-hidden">
-            <div className="absolute -left-12 top-0 bottom-0 w-8 bg-gradient-to-r from-transparent via-emerald-400/20 to-transparent animate-circuit-x pointer-events-none"></div>
+          {/* Card 3: Databases & Pub/Sub (With Working Laser-Scanning Database Engine Stack) */}
+          <div className="bg-slate-900/70 border border-slate-800/90 rounded-2xl p-4 hover:border-emerald-500/70 hover:-translate-y-1 transition-all group shadow-xl flex flex-col items-center text-center relative overflow-hidden">
+            
+            {/* Visual Background Engine: Animated Cylindrical Database Tier Stack with Reading Beam */}
+            <div className="absolute inset-0 pointer-events-none flex flex-col items-center justify-center opacity-30 select-none overflow-hidden">
+              <div className="relative w-28 h-36 flex flex-col justify-between py-2">
+                {/* Vertical Laser Query Scanning Beam */}
+                <div className="absolute inset-x-0 h-1 bg-gradient-to-r from-transparent via-emerald-400 to-transparent animate-db-scan shadow-[0_0_12px_#10b981]"></div>
 
-            <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-2 group-hover:scale-110 transition-transform">
+                {/* Disc 1 (Top Cache) */}
+                <div className="w-full h-6 rounded-full border-2 border-emerald-400/80 bg-emerald-950/40 flex items-center justify-between px-3 animate-db-pulse">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
+                  <span className="text-[8px] font-mono font-bold text-emerald-300">REDIS :6379</span>
+                </div>
+
+                {/* Disc 2 (Primary Storage Tier) */}
+                <div className="w-full h-6 rounded-full border-2 border-emerald-500/70 bg-emerald-950/40 flex items-center justify-between px-3 animate-db-pulse" style={{ animationDelay: '0.4s' }}>
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                  <span className="text-[8px] font-mono font-bold text-emerald-300">POSTGRES</span>
+                </div>
+
+                {/* Disc 3 (Document Store Tier) */}
+                <div className="w-full h-6 rounded-full border-2 border-emerald-500/70 bg-emerald-950/40 flex items-center justify-between px-3 animate-db-pulse" style={{ animationDelay: '0.8s' }}>
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                  <span className="text-[8px] font-mono font-bold text-emerald-300">MONGODB</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="w-10 h-10 rounded-xl bg-emerald-500/15 border border-emerald-500/40 flex items-center justify-center text-emerald-400 mb-2 group-hover:scale-110 transition-transform relative z-10">
               <Database className="w-5 h-5" />
             </div>
-            <h3 className="text-sm font-bold text-white mb-2">Databases &amp; Pub/Sub</h3>
-            <ul className="space-y-1.5 text-xs text-slate-300 font-medium flex flex-col items-center w-full">
+            <h3 className="text-sm font-bold text-white mb-2 relative z-10">Databases &amp; Pub/Sub</h3>
+            <ul className="space-y-1.5 text-xs text-slate-300 font-medium flex flex-col items-center w-full relative z-10">
               {skills.database.map((item, idx) => (
                 <li key={idx} className="flex items-center justify-center gap-1.5 text-center">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0"></span> <span>{item}</span>
@@ -919,15 +1094,23 @@ export default function App() {
             </ul>
           </div>
 
-          {/* Card 4: Cloud & DevOps (With Active Container Pod Ring) */}
-          <div className="bg-slate-900/60 border border-slate-800/90 rounded-2xl p-4 hover:border-violet-500/60 hover:-translate-y-1 transition-all group shadow-xl flex flex-col items-center text-center relative overflow-hidden">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-28 h-28 rounded-full border border-dashed border-violet-500/20 animate-spin-slow pointer-events-none"></div>
+          {/* Card 4: Cloud & DevOps (With Rotating Cluster Nodes & Orbit Mechanism) */}
+          <div className="bg-slate-900/70 border border-slate-800/90 rounded-2xl p-4 hover:border-violet-500/70 hover:-translate-y-1 transition-all group shadow-xl flex flex-col items-center text-center relative overflow-hidden">
+            
+            {/* Visual Background Engine: Rotating Kubernetes / Docker Gear Cluster */}
+            <div className="absolute inset-0 pointer-events-none flex items-center justify-center opacity-25 overflow-hidden">
+              <div className="w-36 h-36 border-2 border-dashed border-violet-400/60 rounded-full animate-devops-gear flex items-center justify-between p-2">
+                <div className="w-3 h-3 rounded-full bg-violet-400 shadow-[0_0_8px_#8b5cf6]"></div>
+                <div className="w-3 h-3 rounded-full bg-indigo-400 shadow-[0_0_8px_#6366f1]"></div>
+                <div className="w-3 h-3 rounded-full bg-cyan-400 shadow-[0_0_8px_#38bdf8]"></div>
+              </div>
+            </div>
 
-            <div className="w-10 h-10 rounded-xl bg-violet-500/10 border border-violet-500/30 flex items-center justify-center text-violet-400 mb-2 group-hover:scale-110 transition-transform">
+            <div className="w-10 h-10 rounded-xl bg-violet-500/15 border border-violet-500/40 flex items-center justify-center text-violet-400 mb-2 group-hover:scale-110 transition-transform relative z-10">
               <CpuIcon className="w-5 h-5" />
             </div>
-            <h3 className="text-sm font-bold text-white mb-2">Cloud &amp; DevOps</h3>
-            <ul className="space-y-1.5 text-xs text-slate-300 font-medium flex flex-col items-center w-full">
+            <h3 className="text-sm font-bold text-white mb-2 relative z-10">Cloud &amp; DevOps</h3>
+            <ul className="space-y-1.5 text-xs text-slate-300 font-medium flex flex-col items-center w-full relative z-10">
               {skills.devops.map((item, idx) => (
                 <li key={idx} className="flex items-center justify-center gap-1.5 text-center">
                   <span className="w-1.5 h-1.5 rounded-full bg-violet-400 shrink-0"></span> <span>{item}</span>
@@ -939,7 +1122,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* Projects Section */}
+      {/* Projects Section with Realistic Black Pearl Pirate Ship & Flag Navigation */}
       <section id="projects" className="max-w-7xl mx-auto px-4 sm:px-8 py-10 sm:py-14 border-t border-slate-800/80">
         
         <div className="flex flex-col items-center text-center mb-8 gap-3">
@@ -948,7 +1131,7 @@ export default function App() {
           </div>
           <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">Featured Projects</h2>
           <p className="text-slate-400 text-xs sm:text-sm max-w-lg">
-            Explore distributed systems, production web applications, and real-time streaming engines.
+            Hover or touch any project to summon the Pirate Ship across the deck, raising the Jolly Roger flag to navigate to the repository!
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-1.5 p-1 rounded-xl bg-slate-900 border border-slate-800 shadow-lg mt-1">
@@ -995,14 +1178,79 @@ export default function App() {
           </div>
         </div>
 
+        {/* Flagship Project with Floating Pirate Galleon */}
         {(activeFilter === 'all' || activeFilter === 'fullstack') && (
           <div className="mb-6 rounded-2xl bg-gradient-to-br from-indigo-950/40 via-slate-900/80 to-[#02050e] border-2 border-indigo-500/40 p-4 sm:p-6 shadow-2xl relative overflow-hidden group hover:border-indigo-400/80 hover:shadow-[0_0_35px_rgba(99,102,241,0.2)] transition-all">
             <div className="absolute -top-24 -right-24 w-60 h-60 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none group-hover:scale-125 transition-transform duration-700"></div>
 
+            {/* 🏴‍☠️ Realistic Pirates of the Caribbean Ship Galleon Floating in Center Deck */}
+            <div className="absolute bottom-2 left-0 right-0 flex items-center justify-center pointer-events-none z-30">
+              <div className="pirate-ship-voyage opacity-0 flex flex-col items-center select-none pointer-events-auto">
+                
+                {/* Raised Pirate Flag (Touch/Click to Go to Git Repo) */}
+                <a 
+                  href="https://github.com/CHRISTO25/realtime-connect-platform"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="pirate-flag-hoist opacity-0 mb-1 px-3 py-1 rounded-lg bg-gradient-to-r from-red-600 via-black to-slate-900 border border-red-500/60 shadow-[0_0_15px_rgba(239,68,68,0.8)] text-white text-[10px] font-mono font-black tracking-wider flex items-center gap-1.5 active:scale-90 hover:brightness-125 transition-all cursor-pointer"
+                >
+                  <span>☠️ HOIST TO GITHUB REPO</span>
+                  <ArrowUpRight className="w-3.5 h-3.5 text-amber-300" />
+                </a>
+
+                {/* Highly Detailed SVG Black Pearl Pirate Ship */}
+                <svg className="w-36 h-20 filter drop-shadow-[0_0_12px_rgba(56,189,248,0.7)]" viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  {/* Wave effect under hull */}
+                  <path d="M10 68 Q 40 72 80 68 T 150 68" stroke="#38bdf8" strokeWidth="2" strokeDasharray="4 3" opacity="0.6"/>
+                  
+                  {/* Dark Oak Wooden Hull & Raised Poop Deck */}
+                  <path d="M22 48 L142 46 C136 64, 114 68, 80 68 C46 68, 28 64, 22 48 Z" fill="#181310" stroke="#78350f" strokeWidth="1.5"/>
+                  <path d="M118 38 L144 40 L142 48 L118 48 Z" fill="#261b14" stroke="#78350f" strokeWidth="1"/>
+                  <path d="M18 40 L34 44 L30 48 L16 45 Z" fill="#261b14" stroke="#78350f" strokeWidth="1"/>
+                  
+                  {/* Cannons on Gun Deck */}
+                  <circle cx="42" cy="54" r="2" fill="#000" stroke="#fbbf24" strokeWidth="0.8"/>
+                  <circle cx="58" cy="55" r="2" fill="#000" stroke="#fbbf24" strokeWidth="0.8"/>
+                  <circle cx="76" cy="55" r="2" fill="#000" stroke="#fbbf24" strokeWidth="0.8"/>
+                  <circle cx="94" cy="55" r="2" fill="#000" stroke="#fbbf24" strokeWidth="0.8"/>
+                  <circle cx="112" cy="54" r="2" fill="#000" stroke="#fbbf24" strokeWidth="0.8"/>
+
+                  {/* Ship Bowsprit Mast extending forward */}
+                  <line x1="16" y1="44" x2="2" y2="34" stroke="#451a03" strokeWidth="2.5"/>
+
+                  {/* 3 Full-Rigged Masts */}
+                  <line x1="45" y1="50" x2="45" y2="10" stroke="#271810" strokeWidth="2"/>
+                  <line x1="80" y1="50" x2="80" y2="4" stroke="#271810" strokeWidth="2.5"/>
+                  <line x1="115" y1="48" x2="115" y2="12" stroke="#271810" strokeWidth="2"/>
+
+                  {/* Black Pearl Weathered Canvas Sails */}
+                  {/* Fore Mast Sails */}
+                  <path d="M34 16 Q 45 14 56 16 Q 45 28 34 28 Z" fill="#0a0a0c" stroke="#334155" strokeWidth="0.8"/>
+                  <path d="M32 30 Q 45 28 58 30 Q 45 44 32 44 Z" fill="#111317" stroke="#334155" strokeWidth="0.8"/>
+
+                  {/* Main Mast Sails */}
+                  <path d="M68 12 Q 80 10 92 12 Q 80 24 68 24 Z" fill="#0a0a0c" stroke="#334155" strokeWidth="0.8"/>
+                  <path d="M64 26 Q 80 24 96 26 Q 80 40 64 40 Z" fill="#111317" stroke="#334155" strokeWidth="0.8"/>
+                  
+                  {/* Mizzen Mast Sail */}
+                  <path d="M106 18 Q 115 16 124 18 Q 115 30 106 30 Z" fill="#0a0a0c" stroke="#334155" strokeWidth="0.8"/>
+                  <path d="M104 32 Q 115 30 126 32 Q 115 44 104 44 Z" fill="#111317" stroke="#334155" strokeWidth="0.8"/>
+
+                  {/* Rigging Lines */}
+                  <line x1="2" y1="34" x2="45" y2="10" stroke="#64748b" strokeWidth="0.6" strokeDasharray="1 1"/>
+                  <line x1="45" y1="10" x2="80" y2="4" stroke="#64748b" strokeWidth="0.6" strokeDasharray="1 1"/>
+                  <line x1="80" y1="4" x2="115" y2="12" stroke="#64748b" strokeWidth="0.6" strokeDasharray="1 1"/>
+
+                  {/* Crow's Nest with Pirate Lookout */}
+                  <rect x="77" y="16" width="6" height="4" fill="#3e2723" rx="1"/>
+                </svg>
+              </div>
+            </div>
+
             <div className="flex flex-col lg:flex-row items-center justify-between gap-3 pb-4 border-b border-indigo-500/20 text-center lg:text-left">
               <div className="flex flex-col items-center lg:items-start">
                 <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-indigo-500/20 border border-indigo-400/40 text-indigo-300 text-[10px] font-mono font-bold mb-1.5 uppercase tracking-wider">
-                  <Radio className="w-3 h-3 text-indigo-400 animate-pulse" /> FLAGSHIP FULL-STACK PLATFORM
+                  <Radio className="w-3.5 h-3.5 text-indigo-400 animate-pulse" /> FLAGSHIP FULL-STACK PLATFORM
                 </div>
                 <h3 className="text-xl sm:text-2xl font-extrabold text-white tracking-tight">
                   Real-Time Connect Platform
@@ -1104,8 +1352,50 @@ export default function App() {
           {filteredProjects.filter(p => p.id !== 'realtime-connect').map((project) => (
             <div 
               key={project.id}
-              className="bg-slate-900/40 border border-slate-800/80 rounded-2xl overflow-hidden flex flex-col justify-between hover:border-indigo-500/60 hover:bg-slate-900/70 hover:shadow-xl hover:shadow-indigo-500/10 transition-all duration-300 group transform hover:-translate-y-1"
+              className="bg-slate-900/40 border border-slate-800/80 rounded-2xl overflow-hidden flex flex-col justify-between hover:border-indigo-500/60 hover:bg-slate-900/70 hover:shadow-xl hover:shadow-indigo-500/10 transition-all duration-300 group transform hover:-translate-y-1 relative"
             >
+              {/* 🏴‍☠️ Pirate Ship Summon Across Repository Deck */}
+              <div className="absolute bottom-1 left-0 right-0 flex items-center justify-center pointer-events-none z-30">
+                <div className="pirate-ship-voyage opacity-0 flex flex-col items-center select-none pointer-events-auto">
+                  
+                  {/* Flag Hoisted in Center */}
+                  <a 
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="pirate-flag-hoist opacity-0 mb-0.5 px-2.5 py-0.5 rounded-md bg-gradient-to-r from-red-600 via-black to-slate-950 border border-red-500/70 shadow-[0_0_12px_#ef4444] text-white text-[9px] font-mono font-bold tracking-wider flex items-center gap-1 active:scale-90 hover:brightness-125 transition-all cursor-pointer"
+                  >
+                    <span>☠️ TOUCH TO GO TO REPO</span>
+                    <ArrowUpRight className="w-3 h-3 text-amber-300" />
+                  </a>
+
+                  {/* Pirate Ship Artwork */}
+                  <svg className="w-28 h-16 filter drop-shadow-[0_0_10px_rgba(56,189,248,0.7)]" viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 68 Q 40 72 80 68 T 150 68" stroke="#38bdf8" strokeWidth="2" strokeDasharray="3 3" opacity="0.6"/>
+                    <path d="M22 48 L142 46 C136 64, 114 68, 80 68 C46 68, 28 64, 22 48 Z" fill="#181310" stroke="#78350f" strokeWidth="1.5"/>
+                    <path d="M118 38 L144 40 L142 48 L118 48 Z" fill="#261b14" stroke="#78350f" strokeWidth="1"/>
+                    <line x1="16" y1="44" x2="2" y2="34" stroke="#451a03" strokeWidth="2.5"/>
+
+                    <line x1="45" y1="50" x2="45" y2="10" stroke="#271810" strokeWidth="2"/>
+                    <line x1="80" y1="50" x2="80" y2="4" stroke="#271810" strokeWidth="2.5"/>
+                    <line x1="115" y1="48" x2="115" y2="12" stroke="#271810" strokeWidth="2"/>
+
+                    <path d="M34 16 Q 45 14 56 16 Q 45 28 34 28 Z" fill="#0a0a0c" stroke="#334155" strokeWidth="0.8"/>
+                    <path d="M32 30 Q 45 28 58 30 Q 45 44 32 44 Z" fill="#111317" stroke="#334155" strokeWidth="0.8"/>
+
+                    <path d="M68 12 Q 80 10 92 12 Q 80 24 68 24 Z" fill="#0a0a0c" stroke="#334155" strokeWidth="0.8"/>
+                    <path d="M64 26 Q 80 24 96 26 Q 80 40 64 40 Z" fill="#111317" stroke="#334155" strokeWidth="0.8"/>
+                    
+                    <path d="M106 18 Q 115 16 124 18 Q 115 30 106 30 Z" fill="#0a0a0c" stroke="#334155" strokeWidth="0.8"/>
+                    <path d="M104 32 Q 115 30 126 32 Q 115 44 104 44 Z" fill="#111317" stroke="#334155" strokeWidth="0.8"/>
+
+                    <circle cx="58" cy="55" r="2" fill="#000" stroke="#fbbf24" strokeWidth="0.8"/>
+                    <circle cx="80" cy="55" r="2" fill="#000" stroke="#fbbf24" strokeWidth="0.8"/>
+                    <circle cx="102" cy="55" r="2" fill="#000" stroke="#fbbf24" strokeWidth="0.8"/>
+                  </svg>
+                </div>
+              </div>
+
               <div className="p-4 text-left">
                 <div className="flex items-center justify-between mb-3">
                   <div className="p-2 rounded-xl bg-slate-800/80 border border-slate-700/80 shadow-sm group-hover:scale-110 group-hover:border-indigo-500/50 group-hover:rotate-6 transition-all duration-300">
